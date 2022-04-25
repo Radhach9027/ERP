@@ -24,6 +24,8 @@
 		A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */; };
 		A2DBF9F328166E030060BF21 /* NetworkHTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */; };
 		A2DBF9F5281687FD0060BF21 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F4281687FD0060BF21 /* Network.swift */; };
+		A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */; };
+		A2DBF9F9281688B00060BF21 /* NetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBodyRequestParameters.swift; sourceTree = "<group>"; };
 		A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHTTPHeaderField.swift; sourceTree = "<group>"; };
 		A2DBF9F4281687FD0060BF21 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyEndpoint.swift; sourceTree = "<group>"; };
+		A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 				A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */,
 				A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */,
 				A2DBF9F4281687FD0060BF21 /* Network.swift */,
+				A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 		A2DBF9E128165FA40060BF21 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -341,6 +347,7 @@
 				A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */,
 				A2DBF9F5281687FD0060BF21 /* Network.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
+				A2DBF9F9281688B00060BF21 /* NetworkRequestProtocol.swift in Sources */,
 				A2DBF9F328166E030060BF21 /* NetworkHTTPHeaderField.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
 				A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */,
@@ -348,6 +355,7 @@
 				A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */,
 				A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */,
 				A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */,
+				A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */,
 				A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
