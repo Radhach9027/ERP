@@ -45,12 +45,40 @@ class RootViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        setup()
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
 
+private extension RootViewController {
+    
+    func setup() {
+        
+        view.backgroundColor = .white
+        stack.addArrangedSubview(astronomyImageView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(stack)
+        NSLayoutConstraint.activate([
+            
+            astronomyImageView.heightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.5),
+            astronomyImageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            
+            scrollView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            stack.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
+            stack.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
+            stack.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            stack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
+    }
 }
 
