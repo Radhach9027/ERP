@@ -97,9 +97,15 @@
 		A2DBF9AB28165E150060BF21 /* WalmartAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				A2DBF9E228165FAB0060BF21 /* Components */,
+				A2DBF9E128165FA40060BF21 /* Endpoints */,
+				A2DBF9E028165F940060BF21 /* Network */,
+				A2DBF9DF28165F8B0060BF21 /* Services */,
+				A2DBF9DE28165F830060BF21 /* ViewModels */,
+				A2DBF9DD28165F750060BF21 /* Models */,
+				A2DBF9DC28165F6A0060BF21 /* Views */,
 				A2DBF9AC28165E150060BF21 /* AppDelegate.swift */,
 				A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */,
-				A2DBF9B028165E150060BF21 /* RootViewController.swift */,
 				A2DBF9B528165E1A0060BF21 /* Assets.xcassets */,
 				A2DBF9B728165E1A0060BF21 /* LaunchScreen.storyboard */,
 				A2DBF9BA28165E1A0060BF21 /* Info.plist */,
@@ -122,6 +128,56 @@
 				A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */,
 			);
 			path = WalmartAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		A2DBF9DC28165F6A0060BF21 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A2DBF9B028165E150060BF21 /* RootViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2DBF9DD28165F750060BF21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2DBF9DE28165F830060BF21 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A2DBF9DF28165F8B0060BF21 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A2DBF9E028165F940060BF21 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A2DBF9E128165FA40060BF21 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		A2DBF9E228165FAB0060BF21 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
