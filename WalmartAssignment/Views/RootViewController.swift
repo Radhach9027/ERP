@@ -9,6 +9,7 @@ import UIKit
 import Combine
 
 class RootViewController: UIViewController {
+    
     private var cancellable = Set<AnyCancellable>()
     private var viewModel: NasaAstronomyViewModelProtocol
     
@@ -63,6 +64,11 @@ class RootViewController: UIViewController {
 private extension RootViewController {
     
     func setup() {
+
+        defer {
+            fetchData()
+            listenToSubscriptions()
+        }
         
         view.backgroundColor = .white
         stack.addArrangedSubview(astronomyImageView)
@@ -83,6 +89,19 @@ private extension RootViewController {
             stack.topAnchor.constraint(equalTo: scrollView.topAnchor),
             stack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
+    }
+    
+    func fetchData() {
+        viewModel.fetchAstronomy(on: .main)
+    }
+    
+    func listenToSubscriptions() {
+        viewModel.subject
+            .compactMap{$0}
+            .print()
+            .sink { result in
+                print(result)
+            } receiveValue: { _ in } .store(in: &cancellable)
     }
 }
 
