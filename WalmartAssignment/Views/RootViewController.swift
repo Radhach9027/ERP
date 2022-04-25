@@ -98,10 +98,34 @@ private extension RootViewController {
     func listenToSubscriptions() {
         viewModel.subject
             .compactMap{$0}
-            .print()
             .sink { result in
-                print(result)
-            } receiveValue: { _ in } .store(in: &cancellable)
+                switch result {
+                    case .failure(let error):
+                        print(error.errorDescription ?? "something went wrong")
+                    default:
+                        break
+                }
+            } receiveValue: { [weak self] model in
+                self?.renderUIElements(model: model)
+            }.store(in: &cancellable)
+    }
+    
+    
+    func renderUIElements(model: NasaAstronomy) {
+        
+        [makeLabel("\(model.title)",
+                   .boldSystemFont(ofSize: 20),
+                   .black),
+         makeLabel("\(model.explanation)",
+                   .systemFont(ofSize: 14),
+                   .gray)].forEach { label in
+            stack.addArrangedSubview(label)
+        }
+        
+        guard let url = URL(string: model.url) else {
+            return
+        }
+        astronomyImageView.loadImageWithUrl(url)
     }
 }
 
