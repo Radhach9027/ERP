@@ -15,6 +15,4 @@ protocol NetworkProtocol {
     
     func request(for url: URL,
                  receive: DispatchQueue) -> AnyPublisher<Data, NetworkError>
-    
-    var isInternetReachable: Bool { get }
 }

@@ -63,7 +63,6 @@ final class ImageLoader: UIImageView {
                         self?.image = imageToCache
                     }
                 }
-                
             }.store(in: &cancellable)
     }
 }

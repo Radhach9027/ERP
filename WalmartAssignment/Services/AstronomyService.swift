@@ -29,6 +29,7 @@ final class AstronomyService: AstronomyServiceProtocol {
                                   receive: DispatchQueue) -> Future<NasaAstronomy, NetworkError> {
         
         Future<NasaAstronomy, NetworkError> { [unowned self] promise in
+            
             do {
                 let request = try endpoint.makeRequest()
                 self.network.request(for: request,

@@ -70,6 +70,7 @@ private extension RootViewController {
             listenToSubscriptions()
         }
         
+        title = "Nasa Astronomy"
         view.backgroundColor = .white
         stack.addArrangedSubview(astronomyImageView)
         view.addSubview(scrollView)
@@ -97,11 +98,12 @@ private extension RootViewController {
     
     func listenToSubscriptions() {
         viewModel.subject
+            .receive(on: DispatchQueue.main)
             .compactMap{$0}
-            .sink { result in
+            .sink { [weak self] result in
                 switch result {
                     case .failure(let error):
-                        print(error.errorDescription ?? "something went wrong")
+                        self?.present(message: error.errorDescription)
                     default:
                         break
                 }

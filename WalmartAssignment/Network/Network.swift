@@ -18,10 +18,6 @@ struct Network {
 
 extension Network: NetworkProtocol {
     
-    var isInternetReachable: Bool {
-        true
-    }
-    
     func request(for request: URLRequest,
                  receive: DispatchQueue) -> AnyPublisher<Data, NetworkError> {
         
