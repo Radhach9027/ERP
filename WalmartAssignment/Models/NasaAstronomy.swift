@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NasaAstronomy: Codable {
+struct NasaAstronomy: Codable, Equatable {
     let date, explanation: String
     let hdurl: String
     let mediaType, serviceVersion, title: String

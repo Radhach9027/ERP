@@ -12,7 +12,6 @@
 		A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9B028165E150060BF21 /* RootViewController.swift */; };
 		A2DBF9B628165E1A0060BF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2DBF9B528165E1A0060BF21 /* Assets.xcassets */; };
 		A2DBF9B928165E1A0060BF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2DBF9B728165E1A0060BF21 /* LaunchScreen.storyboard */; };
-		A2DBF9C428165E1A0060BF21 /* WalmartAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9C328165E1A0060BF21 /* WalmartAssignmentTests.swift */; };
 		A2DBF9CE28165E1A0060BF21 /* WalmartAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9CD28165E1A0060BF21 /* WalmartAssignmentUITests.swift */; };
 		A2DBF9D028165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */; };
 		A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */; };
@@ -28,6 +27,9 @@
 		A2DBF9F9281688B00060BF21 /* NetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */; };
 		A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */; };
 		A2DBF9FD281689A10060BF21 /* AstronomyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FC281689A10060BF21 /* AstronomyService.swift */; };
+		A2DBF9FF28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FE28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift */; };
+		A2DBFA0228168EFA0060BF21 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA0128168EFA0060BF21 /* MockNetwork.swift */; };
+		A2DBFA042816A12B0060BF21 /* AstronomyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A2DBFA032816A12B0060BF21 /* AstronomyResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,6 @@
 		A2DBF9B828165E1A0060BF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2DBF9BA28165E1A0060BF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DBF9BF28165E1A0060BF21 /* WalmartAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalmartAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2DBF9C328165E1A0060BF21 /* WalmartAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentTests.swift; sourceTree = "<group>"; };
 		A2DBF9C928165E1A0060BF21 /* WalmartAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalmartAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9CD28165E1A0060BF21 /* WalmartAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentUITests.swift; sourceTree = "<group>"; };
 		A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -73,6 +74,9 @@
 		A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProtocol.swift; sourceTree = "<group>"; };
 		A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModel.swift; sourceTree = "<group>"; };
 		A2DBF9FC281689A10060BF21 /* AstronomyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyService.swift; sourceTree = "<group>"; };
+		A2DBF9FE28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModelTests.swift; sourceTree = "<group>"; };
+		A2DBFA0128168EFA0060BF21 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
+		A2DBFA032816A12B0060BF21 /* AstronomyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AstronomyResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +146,8 @@
 		A2DBF9C228165E1A0060BF21 /* WalmartAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				A2DBF9C328165E1A0060BF21 /* WalmartAssignmentTests.swift */,
+				A2DBFA0028168EEA0060BF21 /* Mocks */,
+				A2DBF9FE28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift */,
 			);
 			path = WalmartAssignmentTests;
 			sourceTree = "<group>";
@@ -217,6 +222,15 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A2DBFA0028168EEA0060BF21 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A2DBFA0128168EFA0060BF21 /* MockNetwork.swift */,
+				A2DBFA032816A12B0060BF21 /* AstronomyResponse.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DBFA042816A12B0060BF21 /* AstronomyResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +387,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DBF9C428165E1A0060BF21 /* WalmartAssignmentTests.swift in Sources */,
+				A2DBFA0228168EFA0060BF21 /* MockNetwork.swift in Sources */,
+				A2DBF9FF28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
