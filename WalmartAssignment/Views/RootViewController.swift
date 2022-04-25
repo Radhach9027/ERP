@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class RootViewController: UIViewController {
-
+    private var cancellable = Set<AnyCancellable>()
+    private var viewModel: NasaAstronomyViewModelProtocol
+    
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = true
@@ -46,7 +49,8 @@ class RootViewController: UIViewController {
         return label
     }
     
-    init() {
+    init(viewModel: NasaAstronomyViewModelProtocol = NasaAstronomyViewModel()) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         setup()
     }
