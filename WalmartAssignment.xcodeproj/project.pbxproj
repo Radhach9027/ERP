@@ -20,6 +20,8 @@
 		A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E7281660BD0060BF21 /* NetworkError.swift */; };
 		A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */; };
 		A2DBF9ED28166D230060BF21 /* NetworkEnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */; };
+		A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */; };
+		A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		A2DBF9E7281660BD0060BF21 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentProtocol.swift; sourceTree = "<group>"; };
+		A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestMethod.swift; sourceTree = "<group>"; };
+		A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBodyRequestParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 				A2DBF9E7281660BD0060BF21 /* NetworkError.swift */,
 				A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */,
 				A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */,
+				A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */,
+				A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -329,9 +335,11 @@
 				A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
+				A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */,
 				A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */,
 				A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */,
 				A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */,
+				A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */,
 				A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
