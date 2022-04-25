@@ -22,7 +22,7 @@ final class ImageLoader: UIImageView {
         return indicator
     }()
     
-    init(network: NetworkProtocol = Network(session: URLSession.shared)) {
+    init(network: NetworkProtocol = Network(session: URLSession.cacheSession)) {
         self.network = network
         super.init(frame: .zero)
         setup()

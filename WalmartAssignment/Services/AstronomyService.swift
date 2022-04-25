@@ -17,7 +17,7 @@ final class AstronomyService: AstronomyServiceProtocol {
     private var network: NetworkProtocol
     private var cancellable = Set<AnyCancellable>()
     
-    init(network: NetworkProtocol = Network()) {
+    init(network: NetworkProtocol = Network(session: URLSession.cacheSession)) {
         self.network = network
     }
     
