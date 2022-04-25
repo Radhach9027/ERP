@@ -27,6 +27,7 @@
 		A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */; };
 		A2DBF9F9281688B00060BF21 /* NetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */; };
 		A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */; };
+		A2DBF9FD281689A10060BF21 /* AstronomyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FC281689A10060BF21 /* AstronomyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyEndpoint.swift; sourceTree = "<group>"; };
 		A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProtocol.swift; sourceTree = "<group>"; };
 		A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModel.swift; sourceTree = "<group>"; };
+		A2DBF9FC281689A10060BF21 /* AstronomyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 		A2DBF9DF28165F8B0060BF21 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A2DBF9FC281689A10060BF21 /* AstronomyService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */,
 				A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */,
 				A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */,
+				A2DBF9FD281689A10060BF21 /* AstronomyService.swift in Sources */,
 				A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
