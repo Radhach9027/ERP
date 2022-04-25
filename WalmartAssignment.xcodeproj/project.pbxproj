@@ -22,6 +22,7 @@
 		A2DBF9ED28166D230060BF21 /* NetworkEnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */; };
 		A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */; };
 		A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */; };
+		A2DBF9F328166E030060BF21 /* NetworkHTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentProtocol.swift; sourceTree = "<group>"; };
 		A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestMethod.swift; sourceTree = "<group>"; };
 		A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBodyRequestParameters.swift; sourceTree = "<group>"; };
+		A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHTTPHeaderField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */,
 				A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */,
 				A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */,
+				A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				A2DBF9ED28166D230060BF21 /* NetworkEnvironmentProtocol.swift in Sources */,
 				A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
+				A2DBF9F328166E030060BF21 /* NetworkHTTPHeaderField.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
 				A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */,
 				A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */,
