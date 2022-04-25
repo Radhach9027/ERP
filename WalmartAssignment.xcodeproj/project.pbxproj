@@ -16,6 +16,8 @@
 		A2DBF9CE28165E1A0060BF21 /* WalmartAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9CD28165E1A0060BF21 /* WalmartAssignmentUITests.swift */; };
 		A2DBF9D028165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */; };
 		A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */; };
+		A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */; };
+		A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E7281660BD0060BF21 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A2DBF9CD28165E1A0060BF21 /* WalmartAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentUITests.swift; sourceTree = "<group>"; };
 		A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomy.swift; sourceTree = "<group>"; };
+		A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		A2DBF9E7281660BD0060BF21 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,8 @@
 		A2DBF9E028165F940060BF21 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */,
+				A2DBF9E7281660BD0060BF21 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 			files = (
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
+				A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */,
+				A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */,
 				A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */,
 				A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */,
 			);
