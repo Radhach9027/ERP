@@ -32,6 +32,20 @@ class RootViewController: UIViewController {
         return image
     }()
     
+    private lazy var makeLabel:(String,
+                                UIFont,
+                                UIColor) -> UILabel = { (title,
+                                                         font,
+                                                         color) in
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.text = title
+        label.textColor = color
+        label.font = font
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
