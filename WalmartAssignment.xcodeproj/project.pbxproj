@@ -18,6 +18,7 @@
 		A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */; };
 		A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */; };
 		A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E7281660BD0060BF21 /* NetworkError.swift */; };
+		A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomy.swift; sourceTree = "<group>"; };
 		A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
 		A2DBF9E7281660BD0060BF21 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */,
 				A2DBF9E7281660BD0060BF21 /* NetworkError.swift */,
+				A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
 				A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */,
