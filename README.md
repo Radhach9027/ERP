@@ -1,4 +1,4 @@
-# WalmartAssignment
+# Project: Nasa Astronomy 
 
 # Design pattern: MVVM+COMBINE
 
