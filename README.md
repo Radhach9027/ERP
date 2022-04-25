@@ -3,7 +3,7 @@
 # Design pattern: MVVM+COMBINE
 
 # How to run ?
-* clone the repo to your machine via (git clone)
+* clone the repo to your machine via (git clone https://github.com/Radhach9027/WalmartAssignment.git)
 * checkout to Radhachandan-WalE
 * select your targe device or simulator and run the app, This should do the job.
 
