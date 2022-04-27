@@ -47,4 +47,17 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
                 return .headerFields(fields: [.contentType : .json])
         }
     }
+    
+    func checkInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
+        
+        guard !isNetworkReachable else {
+            return nil
+        }
+        
+        guard (URLCache.shared.cachedResponse(for: request) == nil) else {
+            return nil
+        }
+        
+        return .noInternet
+    }
 }

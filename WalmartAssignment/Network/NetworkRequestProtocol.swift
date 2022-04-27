@@ -13,7 +13,9 @@ protocol NetworkRequestProtocol: NetworkEnvironmentProtocol {
     var urlComponents: URLComponents? { get }
     var headerFields: NetworkHTTPHeaderField? { get }
     var bodyParameters: NetworkBodyRequestParameters? { get }
+    var isNetworkReachable: Bool { get }
     func makeRequest() throws -> URLRequest
+    func checkInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError?
 }
 
 extension NetworkRequestProtocol {
@@ -44,6 +46,10 @@ extension NetworkRequestProtocol {
         }
     }
     
+    var isNetworkReachable: Bool {
+        NetworkReachability.shared.isReachable
+    }
+    
     func makeRequest() throws -> URLRequest {
         
         guard let url = urlComponents?.url else {
@@ -65,27 +71,19 @@ extension NetworkRequestProtocol {
             throw error
         }
         
-        guard let isReachableError = checkConnectivityBasedOnCache(request: request) else {
+        guard let isReachableError = checkInternetConnectivityBasedOnCache(request: request) else {
             return request
         }
         
         throw isReachableError
     }
     
-    private var isNetworkReachable: Bool {
-        true // put ur reachability check
-    }
-    
-    private func checkConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
+    func checkInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
         
-        guard !isNetworkReachable else {
-            return nil
+        guard isNetworkReachable else {
+            return .noInternet
         }
         
-        guard (URLCache.shared.cachedResponse(for: request) == nil) else {
-            return nil
-        }
-        
-        return .noInternet
+        return nil
     }
 }
