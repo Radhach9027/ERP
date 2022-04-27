@@ -21,7 +21,7 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
         "DEMO_KEY"
     }
     
-    var path: String {
+    var urlPath: String {
         switch self {
             case .fetch:
                 return "\("/planetary/apod")"
@@ -29,19 +29,19 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
     }
     
     var urlComponents: URLComponents? {
-        var components = URLComponents(string: baseURL + path)
+        var components = URLComponents(string: baseURL + urlPath)
         components?.queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
         return components
     }
     
-    var method: NetworkRequestMethod {
+    var httpMethod: NetworkRequestMethod {
         switch self {
             case .fetch:
                 return .get
         }
     }
     
-    var headerFields: NetworkHTTPHeaderField? {
+    var httpHeaderFields: NetworkHTTPHeaderField? {
         switch self {
             case .fetch:
                 return .headerFields(fields: [.contentType : .json])

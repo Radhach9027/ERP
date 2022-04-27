@@ -8,11 +8,11 @@
 import Foundation
 
 protocol NetworkRequestProtocol: NetworkEnvironmentProtocol {
-    var path: String { get }
-    var method: NetworkRequestMethod { get }
+    var urlPath: String { get }
+    var httpMethod: NetworkRequestMethod { get }
     var urlComponents: URLComponents? { get }
-    var headerFields: NetworkHTTPHeaderField? { get }
-    var bodyParameters: NetworkBodyRequestParameters? { get }
+    var httpHeaderFields: NetworkHTTPHeaderField? { get }
+    var httpBodyParameters: NetworkBodyRequestParameters? { get }
     var isNetworkReachable: Bool { get }
     func makeRequest() throws -> URLRequest
     func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError?
@@ -20,11 +20,11 @@ protocol NetworkRequestProtocol: NetworkEnvironmentProtocol {
 
 extension NetworkRequestProtocol {
     
-    var headerFields: NetworkHTTPHeaderField? {
+    var httpHeaderFields: NetworkHTTPHeaderField? {
         nil
     }
     
-    var bodyParameters: NetworkBodyRequestParameters? {
+    var httpBodyParameters: NetworkBodyRequestParameters? {
         nil
     }
     
@@ -33,7 +33,7 @@ extension NetworkRequestProtocol {
     }
     
     private func makeBody() throws -> Data? {
-        guard let parameters = bodyParameters else {
+        guard let parameters = httpBodyParameters else {
             return nil
         }
         
@@ -57,9 +57,9 @@ extension NetworkRequestProtocol {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = method.rawValue
+        request.httpMethod = httpMethod.rawValue
         
-        headerFields?.headers.forEach {
+        httpHeaderFields?.headers.forEach {
             request.setValue($0.value.description,
                              forHTTPHeaderField: $0.key.description)
         }
