@@ -72,13 +72,13 @@ extension NetworkRequestProtocol {
         throw isReachableError
     }
     
-    private var isNetowrkReachable: Bool {
+    private var isNetworkReachable: Bool {
         false // put ur reachability check
     }
     
     private func checkConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
         
-        guard !isNetowrkReachable else {
+        guard !isNetworkReachable else {
             return nil
         }
         
