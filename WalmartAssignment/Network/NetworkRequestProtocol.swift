@@ -15,7 +15,7 @@ protocol NetworkRequestProtocol: NetworkEnvironmentProtocol {
     var bodyParameters: NetworkBodyRequestParameters? { get }
     var isNetworkReachable: Bool { get }
     func makeRequest() throws -> URLRequest
-    func checkInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError?
+    func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError?
 }
 
 extension NetworkRequestProtocol {
@@ -71,14 +71,14 @@ extension NetworkRequestProtocol {
             throw error
         }
         
-        guard let isReachableError = checkInternetConnectivityBasedOnCache(request: request) else {
+        guard let isReachableError = manageInternetConnectivityBasedOnCache(request: request) else {
             return request
         }
         
         throw isReachableError
     }
     
-    func checkInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
+    func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
         
         guard isNetworkReachable else {
             return .noInternet
