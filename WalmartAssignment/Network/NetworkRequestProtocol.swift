@@ -65,6 +65,27 @@ extension NetworkRequestProtocol {
             throw error
         }
         
-        return request
+        guard let isReachableError = checkConnectivityBasedOnCache(request: request) else {
+            return request
+        }
+        
+        throw isReachableError
+    }
+    
+    private var isNetowrkReachable: Bool {
+        false // put ur reachability check
+    }
+    
+    private func checkConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
+        
+        guard !isNetowrkReachable else {
+            return nil
+        }
+        
+        guard (URLCache.shared.cachedResponse(for: request) != nil) else {
+            return .noInternet
+        }
+        
+        return nil
     }
 }
