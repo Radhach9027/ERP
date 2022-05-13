@@ -9,7 +9,6 @@ import UIKit
 import Combine
 
 class RootViewController: UIViewController {
-    
     private var cancellable = Set<AnyCancellable>()
     private var viewModel: NasaAstronomyViewModelProtocol
     private lazy var rootView: RootView = {
@@ -32,7 +31,6 @@ class RootViewController: UIViewController {
 private extension RootViewController {
     
     func setup() {
-        
         defer {
             fetchData()
             listenToSubscriptions()

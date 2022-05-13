@@ -8,7 +8,6 @@
 import UIKit
 
 final class RootView: UIView {
-    
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = true
