@@ -22,10 +22,7 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
     }
     
     var urlPath: String {
-        switch self {
-            case .fetch:
-                return "\("/planetary/apod")"
-        }
+        "\("/planetary/apod")"
     }
     
     var urlComponents: URLComponents? {
@@ -35,17 +32,11 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
     }
     
     var httpMethod: NetworkRequestMethod {
-        switch self {
-            case .fetch:
-                return .get
-        }
+        .get
     }
     
     var httpHeaderFields: NetworkHTTPHeaderField? {
-        switch self {
-            case .fetch:
-                return .headerFields(fields: [.contentType : .json])
-        }
+        .headerFields(fields: [.contentType : .json])
     }
     
     func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {

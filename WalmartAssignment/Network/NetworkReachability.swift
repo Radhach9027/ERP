@@ -60,6 +60,7 @@ final class NetworkReachability {
 }
 
 private extension NetworkReachability {
+    
     func setupReachability() {
         let reachabilityStatusObserver: ((Reachability) -> ()) = { [unowned self] (reachability: Reachability) in
             self.updateReachabilityStatus(reachability.connection)

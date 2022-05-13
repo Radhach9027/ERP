@@ -7,7 +7,12 @@
 
 import Foundation
 
-protocol NetworkRequestProtocol: NetworkEnvironmentProtocol {
+protocol NetworkCacheProtocol {
+    var clearCache: Bool { get }
+    func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError?
+}
+
+protocol NetworkRequestProtocol: NetworkEnvironmentProtocol, NetworkCacheProtocol {
     var urlPath: String { get }
     var httpMethod: NetworkRequestMethod { get }
     var urlComponents: URLComponents? { get }
@@ -15,7 +20,6 @@ protocol NetworkRequestProtocol: NetworkEnvironmentProtocol {
     var httpBodyParameters: NetworkBodyRequestParameters? { get }
     var isNetworkReachable: Bool { get }
     func makeRequest() throws -> URLRequest
-    func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError?
 }
 
 extension NetworkRequestProtocol {
@@ -30,6 +34,10 @@ extension NetworkRequestProtocol {
     
     var apiKey: String? {
         nil
+    }
+    
+    var clearCache: Bool {
+        false
     }
     
     private func makeBody() throws -> Data? {
@@ -71,6 +79,7 @@ extension NetworkRequestProtocol {
             throw error
         }
         
+        clearCacheForRequest(request: request)
         guard let isReachableError = manageInternetConnectivityBasedOnCache(request: request) else {
             return request
         }
@@ -85,5 +94,11 @@ extension NetworkRequestProtocol {
         }
         
         return nil
+    }
+    
+    private func clearCacheForRequest(request: URLRequest) {
+        if clearCache {
+            URLCache.shared.removeCachedResponse(for: request)
+        }
     }
 }

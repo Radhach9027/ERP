@@ -35,6 +35,8 @@
 		A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */; };
 		A2DBFA1C28194A040060BF21 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = A2DBFA1B28194A040060BF21 /* Reachability */; };
 		A2DBFA1E28194A170060BF21 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA1D28194A170060BF21 /* NetworkReachability.swift */; };
+		A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD0329282E4EBB00775BCA /* RootView.swift */; };
+		A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A2DBFA1D28194A170060BF21 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		A2FD0329282E4EBB00775BCA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				A2DBF9B028165E150060BF21 /* RootViewController.swift */,
+				A2FD0329282E4EBB00775BCA /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 			children = (
 				A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */,
 				A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */,
+				A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,7 +408,9 @@
 				A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */,
 				A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */,
 				A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */,
+				A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */,
 				A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */,
+				A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */,
 				A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */,
 				A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */,
 				A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */,
