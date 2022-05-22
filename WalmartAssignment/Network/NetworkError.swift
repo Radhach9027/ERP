@@ -1,9 +1,9 @@
-//
-//  NetworkError.swift
-//  WalmartAssignment
-//
-//  Created by radha chilamkurthy on 25/04/22.
-//
+    //
+    //  NetworkError.swift
+    //  WalmartAssignment
+    //
+    //  Created by radha chilamkurthy on 25/04/22.
+    //
 
 import Foundation
 
@@ -29,44 +29,63 @@ extension NetworkError {
         static let api = -111
     }
     
+    enum Copy {
+        static let fileName = "NetworkErrors"
+        static let fileType = "json"
+        static let noInternet = "Something wrong with the url that has been constructed, Please check and try again"
+        static let noInternetTitle = "No Internet"
+        static let badUrlTitle = "Bar Request Constructed"
+        static let badUrl = "Something wrong with the url that has been constructed, Please check and try again"
+        static let unknown = "An unknown error occurred while processing request, please check and try again."
+        static let HTTPresponseNil = "HTTPURLResponse is nil"
+        static let apiError =  "ApiError"
+        static let nsErrorURLKey = "NSErrorFailingURLKey"
+    }
+    
     static var noInternet: NetworkError {
-        NetworkError(title: "No Internet",
+        NetworkError(title: Copy.noInternetTitle,
                      code: LocalNetworkCodes.noInternet,
-                     errorMessage: "Something wrong with the url that has been constructed, Please check and try again",
-                     userMessage: "")
+                     errorMessage: Copy.noInternet,
+                     userMessage: .empty)
     }
     
     static var badUrl: NetworkError {
-        NetworkError(title: "Bar Request Constructed",
+        NetworkError(title: Copy.badUrlTitle,
                      code: LocalNetworkCodes.badUrl,
-                     errorMessage: "Something wrong with the url that has been constructed, Please check and try again",
-                     userMessage: "")
+                     errorMessage: Copy.badUrl,
+                     userMessage: .empty)
     }
     
     static var networkErrorModel: [NetworkError]? {
-        guard let ressourceURL =  BundleClass().bundle.url(forResource: "NetworkErrors",
-                                                           withExtension: "json"),
-              let jsonData = try? Data(contentsOf: ressourceURL),
-              let model = try? JSONDecoder().decode([NetworkError].self,
-                                                    from: jsonData) else {
+        guard let ressourceURL =  BundleClass().bundle.url(forResource: Copy.fileName,
+                                                           withExtension: Copy.fileType) else {
             return nil
         }
         
-        return model
+        do {
+            let jsonData = try Data(contentsOf: ressourceURL)
+            let model = try JSONDecoder().decode([NetworkError].self,
+                                                 from: jsonData)
+            return model
+        } catch {
+            print(error)
+        }
+        
+        return nil
     }
     
     static var unknown: NetworkError {
-        NetworkError(title: "HTTPURLResponse is nil",
+        NetworkError(title: Copy.HTTPresponseNil,
                      code: LocalNetworkCodes.unknown,
-                     errorMessage: "",
-                     userMessage: "An unknown error occurred while processing request, please check and try again.")
+                     errorMessage: .empty,
+                     userMessage: Copy.unknown)
     }
     
     static func apiError(reason: String) -> NetworkError {
-        NetworkError(title: "ApiError",
+        NetworkError(title: Copy.apiError,
                      code: LocalNetworkCodes.api,
                      errorMessage: reason,
-                     userMessage: "")
+                     userMessage: .empty)
     }
     
     static func validateHTTPError(urlResponse: HTTPURLResponse?) -> NetworkError? {
@@ -81,9 +100,9 @@ extension NetworkError {
         let errorcode = error.code
         let domain = error.domain
         let userMessage = error.localizedDescription
-        var errorMessage = ""
+        var errorMessage: String = .empty
         
-        if let urlError = error.userInfo.first(where: {$0.key == "NSErrorFailingURLKey"})?.value as? Any {
+        if let urlError = error.userInfo.first(where: {$0.key == Copy.nsErrorURLKey })?.value {
             errorMessage = String(describing: urlError)
         }
         
