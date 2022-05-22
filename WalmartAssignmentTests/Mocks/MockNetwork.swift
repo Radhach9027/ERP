@@ -10,12 +10,6 @@ import WalmartAssignment
 import Foundation
 import Combine
 
-final class BundleClass {
-    var bundle: Bundle {
-        return Bundle(for: type(of: self))
-    }
-}
-
 struct MockNetwork: NetworkProtocol {
     
     var isInternetReachable: Bool

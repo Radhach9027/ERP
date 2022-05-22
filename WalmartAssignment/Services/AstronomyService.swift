@@ -39,7 +39,10 @@ final class AstronomyService: AstronomyServiceProtocol {
                     .sink(receiveCompletion: { result in
                         switch result {
                             case .failure(let error):
-                                promise(.failure(NetworkError.apiError(reason: error.localizedDescription)))
+                            guard let error = error as? NetworkError else {
+                                return
+                            }
+                            promise(.failure(error))
                             default:
                                 break
                         }
@@ -47,7 +50,10 @@ final class AstronomyService: AstronomyServiceProtocol {
                     .store(in: &self.cancellable)
                 
             } catch {
-                promise(.failure(NetworkError.apiError(reason: error.localizedDescription)))
+                guard let error = error as? NetworkError else {
+                    return
+                }
+                promise(.failure(error))
             }
         }
     }

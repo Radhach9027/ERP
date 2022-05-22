@@ -32,7 +32,7 @@ extension Network: NetworkProtocol {
             }
             .mapError { error in
                 guard let error = error as? NetworkError else {
-                    return NetworkError.apiError(reason: error.localizedDescription)
+                    return NetworkError.convertErrorToNetworkError(error: error as NSError)
                 }
                 
                 return error
@@ -54,11 +54,25 @@ extension Network: NetworkProtocol {
             }
             .mapError { error in
                 guard let error = error as? NetworkError else {
-                    return NetworkError.apiError(reason: error.localizedDescription)
+                    return NetworkError.convertErrorToNetworkError(error: error as NSError)
                 }
                 
                 return error
             }
             .eraseToAnyPublisher()
     }
+    
+//    func bulkRequest(for requests: [URLRequest],
+//                     receive: DispatchQueue) -> AnyPublisher<[Publishers.MergeMany<AnyPublisher<Data, NetworkError>.Output>]> {
+//        
+//        return Just(requests)
+//            .setFailureType(to: NetworkError.self)
+//            .flatMap { (values) -> Publishers.MergeMany<AnyPublisher<Data, NetworkError>> in
+//                let tasks = values.map { (request) -> AnyPublisher<Data, NetworkError> in
+//                    return self.request(for: request, receive: receive)
+//                }
+//                return Publishers.MergeMany(tasks)
+//            }.collect()
+//            .eraseToAnyPublisher()
+//    }
 }

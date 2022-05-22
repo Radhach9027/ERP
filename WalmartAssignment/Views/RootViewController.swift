@@ -53,7 +53,8 @@ private extension RootViewController {
             .sink { [weak self] result in
                 switch result {
                     case .failure(let error):
-                        self?.present(message: error.errorDescription)
+                    self?.present(withTitle: error.title,
+                                  message: error.errorMessage)
                     default:
                         break
                 }

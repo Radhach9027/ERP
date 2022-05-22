@@ -15,4 +15,8 @@ protocol NetworkProtocol {
     
     func request(for url: URL,
                  receive: DispatchQueue) -> AnyPublisher<Data, NetworkError>
+    
+    /*func bulkRequest(for requests: [URLRequest],
+                 receive: DispatchQueue) -> AnyPublisher<Data, NetworkError>*/
+    
 }
