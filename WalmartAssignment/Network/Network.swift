@@ -11,12 +11,15 @@ import Combine
 final class Network {
     private var session: URLSessionProtocol
     private var sessionDelegate: NetworkSessionDelegateProtocol?
+    private var logger: NetworkLoggerProtocol?
     static var isInternetReachable: Bool {
         NetworkReachability.shared.isReachable
     }
     
-    init(session: URLSessionProtocol = URLSession.shared) {
+    init(session: URLSessionProtocol = URLSession.shared,
+         logger: NetworkLoggerProtocol? = nil) {
         self.session = session
+        self.logger = logger
     }
 }
 
@@ -31,6 +34,18 @@ extension Network {
                                  delegate: delegate,
                                  delegateQueue: delegateQueue)
         self.init(session: session)
+    }
+    
+    convenience init(configuration: URLSessionConfiguration,
+                     delegateQueue: OperationQueue,
+                     pinning: SSLPinning,
+                     logger: NetworkLoggerProtocol) {
+        let delegate = NetworkSessionDelegate(pinning: pinning)
+        let session = URLSession(configuration: configuration,
+                                 delegate: delegate,
+                                 delegateQueue: delegateQueue)
+        self.init(session: session,
+                  logger: logger)
     }
 }
 

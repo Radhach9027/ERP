@@ -13,6 +13,7 @@
 		A2282074283B64B90025154B /* NetworkSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282073283B64B90025154B /* NetworkSessionDelegate.swift */; };
 		A2282076283B65670025154B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282075283B65670025154B /* Data+Extensions.swift */; };
 		A2282078283B66420025154B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282077283B66420025154B /* NetworkResult.swift */; };
+		A228207A283B70E70025154B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282079283B70E70025154B /* NetworkLogger.swift */; };
 		A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AC28165E150060BF21 /* AppDelegate.swift */; };
 		A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */; };
 		A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9B028165E150060BF21 /* RootViewController.swift */; };
@@ -69,6 +70,7 @@
 		A2282073283B64B90025154B /* NetworkSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionDelegate.swift; sourceTree = "<group>"; };
 		A2282075283B65670025154B /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		A2282077283B66420025154B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		A2282079283B70E70025154B /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		A2DBF9A928165E150060BF21 /* WalmartAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalmartAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9AC28165E150060BF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				A2DBFA1D28194A170060BF21 /* NetworkReachability.swift */,
 				A2282073283B64B90025154B /* NetworkSessionDelegate.swift */,
 				A2282077283B66420025154B /* NetworkResult.swift */,
+				A2282079283B70E70025154B /* NetworkLogger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A228207A283B70E70025154B /* NetworkLogger.swift in Sources */,
 				A2DBF9ED28166D230060BF21 /* NetworkEnvironmentProtocol.swift in Sources */,
 				A2282072283B58230025154B /* Bundle.swift in Sources */,
 				A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */,
