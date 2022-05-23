@@ -16,11 +16,11 @@ protocol AstronomyServiceProtocol {
 final class AstronomyService: AstronomyServiceProtocol {
     private var network: NetworkProtocol
     private var cancellable = Set<AnyCancellable>()
-    
-    init(network: NetworkProtocol = Network(session: URLSession.cacheSession)) {
+
+    init(network: NetworkProtocol = Network.session) {
         self.network = network
     }
-    
+        
     deinit {
         print("AstronomyService de-init")
     }

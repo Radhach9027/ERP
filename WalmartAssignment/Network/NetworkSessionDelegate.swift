@@ -22,7 +22,7 @@ final class NetworkSessionDelegate: NSObject, NetworkSessionDelegateProtocol {
     var progressSubject: CurrentValueSubject<(id: Int, progress: Double), Never>
     private var pinning: SSLPinning?
     
-    init(pinning: SSLPinning?,
+    init(pinning: SSLPinning? = nil,
          progressSubject: CurrentValueSubject<(id: Int, progress: Double),
          Never> = .init((id: 0, progress: 0.0))) {
         

@@ -26,6 +26,16 @@ final class Network {
 extension Network {
     
     convenience init(configuration: URLSessionConfiguration,
+                     delegateQueue: OperationQueue) {
+        
+        let delegate = NetworkSessionDelegate()
+        let session = URLSession(configuration: configuration,
+                                 delegate: delegate,
+                                 delegateQueue: delegateQueue)
+        self.init(session: session)
+    }
+
+    convenience init(configuration: URLSessionConfiguration,
                      delegateQueue: OperationQueue,
                      pinning: SSLPinning) {
         
