@@ -13,6 +13,9 @@ protocol URLSessionProtocol {
     
     func dataTaskPublisher(for url: URL) -> URLSession.DataTaskPublisher
     
+    func getAllTasks(completionHandler: @escaping ([URLSessionTask]) -> Void)
+    
+    func invalidateAndCancel()
 }
 
 extension URLSession: URLSessionProtocol {}

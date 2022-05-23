@@ -55,7 +55,7 @@ extension NetworkRequestProtocol {
     }
     
     var isNetworkReachable: Bool {
-        NetworkReachability.shared.isReachable
+        Network.isInternetReachable
     }
     
     func makeRequest() throws -> URLRequest {
