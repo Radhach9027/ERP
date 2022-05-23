@@ -7,12 +7,6 @@
 
 import Foundation
 
-final class BundleClass {
-    var bundle: Bundle {
-        return Bundle(for: type(of: self))
-    }
-}
-
 struct NetworkError: Error, Codable {
     let title: String
     let code: Int
@@ -22,14 +16,15 @@ struct NetworkError: Error, Codable {
 
 extension NetworkError {
     
-    enum LocalNetworkCodes {
+    private enum NetworkCodes {
+        static let jsonFileError = -0
         static let unknown = 0
         static let noInternet = -1
         static let badUrl = -2
         static let api = -111
     }
     
-    enum Copy {
+    private enum Copy {
         static let fileName = "NetworkErrors"
         static let fileType = "json"
         static let noInternet = "Something wrong with the url that has been constructed, Please check and try again"
@@ -40,23 +35,34 @@ extension NetworkError {
         static let HTTPresponseNil = "HTTPURLResponse is nil"
         static let apiError =  "ApiError"
         static let nsErrorURLKey = "NSErrorFailingURLKey"
+        static let codableConversionError = "NetworErrors Json File"
+        static let codableConversionErrorMessage = "Issue in converting NetworkErrors.json via codable model."
     }
     
     static var noInternet: NetworkError {
         NetworkError(title: Copy.noInternetTitle,
-                     code: LocalNetworkCodes.noInternet,
+                     code: NetworkCodes.noInternet,
                      errorMessage: Copy.noInternet,
                      userMessage: .empty)
     }
     
     static var badUrl: NetworkError {
         NetworkError(title: Copy.badUrlTitle,
-                     code: LocalNetworkCodes.badUrl,
+                     code: NetworkCodes.badUrl,
                      errorMessage: Copy.badUrl,
                      userMessage: .empty)
     }
     
-    static var networkErrorModel: [NetworkError]? {
+    
+    private static var errorInCodableConversion: NetworkError {
+        NetworkError(title: Copy.codableConversionError,
+                     code: NetworkCodes.jsonFileError,
+                     errorMessage: Copy.codableConversionErrorMessage,
+                     userMessage: .empty)
+    }
+    
+    private static func makeNetworkErrorModel() throws -> [NetworkError]? {
+        
         guard let ressourceURL =  BundleClass().bundle.url(forResource: Copy.fileName,
                                                            withExtension: Copy.fileType) else {
             return nil
@@ -68,24 +74,15 @@ extension NetworkError {
                                                  from: jsonData)
             return model
         } catch {
-            print(error)
+            throw error
         }
-        
-        return nil
     }
     
-    static var unknown: NetworkError {
+    private static var unknown: NetworkError {
         NetworkError(title: Copy.HTTPresponseNil,
-                     code: LocalNetworkCodes.unknown,
+                     code: NetworkCodes.unknown,
                      errorMessage: .empty,
                      userMessage: Copy.unknown)
-    }
-    
-    static func apiError(reason: String) -> NetworkError {
-        NetworkError(title: Copy.apiError,
-                     code: LocalNetworkCodes.api,
-                     errorMessage: reason,
-                     userMessage: .empty)
     }
     
     static func validateHTTPError(urlResponse: HTTPURLResponse?) -> NetworkError? {
@@ -93,7 +90,17 @@ extension NetworkError {
             return  unknown
         }
         
-        return networkErrorModel?.first(where: { $0.code == response.statusCode })
+        switch response.statusCode {
+            case 200...299:
+                return nil
+            default:
+                do {
+                    let errorModel = try makeNetworkErrorModel()
+                    return errorModel?.first(where: { $0.code == response.statusCode })
+                } catch {
+                    return .errorInCodableConversion
+                }
+        }
     }
     
     static func convertErrorToNetworkError(error: NSError) -> NetworkError {
