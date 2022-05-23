@@ -129,6 +129,12 @@ extension Network {
                 receive: DispatchQueue) -> AnyPublisher<UploadNetworkResponse, NetworkError> {
         
     }
+    
+    func upload(for request: URLRequest,
+                fileURL: URL,
+                receive: DispatchQueue) -> AnyPublisher<UploadNetworkResponse, NetworkError> {
+        
+    }
 }
 
 // MARK: Download Tasks

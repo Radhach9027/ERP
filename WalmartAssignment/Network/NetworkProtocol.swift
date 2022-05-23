@@ -8,19 +8,28 @@
 import Foundation
 import Combine
 
-protocol NetworkProtocol {
+protocol RequestProtocol {
     
     func request(for request: URLRequest,
                  receive: DispatchQueue) -> AnyPublisher<Data, NetworkError>
     
     func request(for url: URL,
                  receive: DispatchQueue) -> AnyPublisher<Data, NetworkError>
-    
-    // TODO: Development in-progress
+}
 
-    /*func upload(with request: URLRequest,
+protocol UploadProtocol {
+    
+    func upload(with request: URLRequest,
                 from bodyData: Data?,
                 receive: DispatchQueue) -> AnyPublisher<UploadNetworkResponse, NetworkError>
+    
+    func upload(for request: URLRequest,
+                fileURL: URL,
+                receive: DispatchQueue) -> AnyPublisher<UploadNetworkResponse, NetworkError>
+    
+}
+
+protocol DowloadProtocol {
     
     func download(for request: URLRequest,
                   receive: DispatchQueue) -> AnyPublisher<DownloadNetworkResponse, NetworkError>
@@ -28,8 +37,9 @@ protocol NetworkProtocol {
     func download(for url: URL,
                   receive: DispatchQueue) -> AnyPublisher<DownloadNetworkResponse, NetworkError>
     
-    func bulkRequest(for requests: [URLRequest],
-                     receive: DispatchQueue) -> AnyPublisher<Data, NetworkError>*/
+}
+
+protocol sessionCancelProtocol {
     
     func cancelAllTasks()
     
@@ -37,3 +47,5 @@ protocol NetworkProtocol {
     
     static var isInternetReachable: Bool { get }
 }
+
+protocol NetworkProtocol : RequestProtocol, sessionCancelProtocol {}
