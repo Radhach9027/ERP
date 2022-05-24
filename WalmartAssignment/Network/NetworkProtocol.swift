@@ -29,7 +29,7 @@ protocol UploadProtocol {
     
 }
 
-protocol DowloadProtocol {
+protocol DownloadProtocol {
     
     func download(for request: URLRequest,
                   receive: DispatchQueue) -> AnyPublisher<DownloadNetworkResponse, NetworkError>
