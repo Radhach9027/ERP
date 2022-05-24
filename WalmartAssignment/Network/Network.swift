@@ -51,6 +51,7 @@ extension Network {
                      delegateQueue: OperationQueue,
                      pinning: SSLPinning,
                      logger: NetworkLoggerProtocol) {
+        
         let delegate = NetworkSessionDelegate(pinning: pinning)
         let session = URLSession(configuration: configuration,
                                  delegate: delegate,
