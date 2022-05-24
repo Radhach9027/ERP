@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 final class Network {
+    
     private var session: URLSessionProtocol
     private var sessionDelegate: NetworkSessionDelegateProtocol?
     private var logger: NetworkLoggerProtocol?
@@ -66,16 +67,30 @@ extension Network: NetworkProtocol {
         
         session.dataTaskPublisher(for: request)
             .receive(on: receive)
-            .tryMap { (data, response) in
+            .tryMap { [weak self] (data, response) in
                 guard let error = NetworkError.validateHTTPError(urlResponse: response as? HTTPURLResponse) else {
                     return data
                 }
                 
+                if let logger = self?.logger {
+                    logger.logRequest(url: request.url!,
+                                      error: error,
+                                      type: .error,
+                                      privacy: .encrypt)
+                }
+                
                 throw error
             }
-            .mapError { error in
+            .mapError { [weak self] error in
                 guard let error = error as? NetworkError else {
                     return NetworkError.convertErrorToNetworkError(error: error as NSError)
+                }
+                
+                if let logger = self?.logger {
+                    logger.logRequest(url: request.url!,
+                                      error: error,
+                                      type: .error,
+                                      privacy: .encrypt)
                 }
                 
                 return error
@@ -88,16 +103,30 @@ extension Network: NetworkProtocol {
         
         session.dataTaskPublisher(for: url)
             .receive(on: receive)
-            .tryMap { (data, response) in
+            .tryMap { [weak self] (data, response) in
                 guard let error = NetworkError.validateHTTPError(urlResponse: response as? HTTPURLResponse) else {
                     return data
                 }
                 
+                if let logger = self?.logger {
+                    logger.logRequest(url: url,
+                                      error: error,
+                                      type: .error,
+                                      privacy: .encrypt)
+                }
+                
                 throw error
             }
-            .mapError { error in
+            .mapError { [weak self] error in
                 guard let error = error as? NetworkError else {
                     return NetworkError.convertErrorToNetworkError(error: error as NSError)
+                }
+                
+                if let logger = self?.logger {
+                    logger.logRequest(url: url,
+                                      error: error,
+                                      type: .error,
+                                      privacy: .encrypt)
                 }
                 
                 return error

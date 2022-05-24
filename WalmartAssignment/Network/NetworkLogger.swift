@@ -30,14 +30,10 @@ extension LoggerCategory {
 
 protocol NetworkLoggerProtocol {
     
-    func logRequest(request: URLRequest,
+    func logRequest(url: URL,
+                    error: NetworkError,
                     type: OSLogType,
                     privacy: LoggerPrivacy)
-    
-    func logErrors(request: URLRequest,
-                   error: NetworkError,
-                   type: OSLogType,
-                   privacy: LoggerPrivacy)
 }
 
 public struct NetworkLogger: NetworkLoggerProtocol {
@@ -57,32 +53,20 @@ public struct NetworkLogger: NetworkLoggerProtocol {
         )
     }
     
-    func logRequest(request: URLRequest,
+    func logRequest(url: URL,
+                    error: NetworkError,
                     type: OSLogType,
                     privacy: LoggerPrivacy) {
         
+        let errorString = "Error = \(error.title), ErrorCode = \(error.code), ErrorMessage = \(error.errorMessage), URL = \(url)"
+
         switch privacy {
             case .open:
-                logger.log(level: type, "NetworkRequest: \(request, privacy: .private(mask: .hash))")
+                logger.log(level: type, "NetworkError: \(errorString, privacy: .public)")
             case .encapsulate:
-                logger.log(level: type, "NetworkRequest: \(request, privacy: .private(mask: .hash))")
+                logger.log(level: type, "NetworkError: \(errorString, privacy: .private)")
             case .encrypt:
-                logger.log(level: type, "NetworkRequest: \(request, privacy: .private(mask: .hash))")
-        }
-    }
-    
-    func logErrors(request: URLRequest,
-                   error: NetworkError,
-                   type: OSLogType,
-                   privacy: LoggerPrivacy) {
-        
-        switch privacy {
-            case .open:
-                logger.log(level: type, "NetworkError: \(request, privacy: .private(mask: .hash))")
-            case .encapsulate:
-                logger.log(level: type, "NetworkError: \(request, privacy: .private(mask: .hash))")
-            case .encrypt:
-                logger.log(level: type, "NetworkError: \(request, privacy: .private(mask: .hash))")
+                logger.log(level: type, "NetworkError: \(errorString, privacy: .private(mask: .hash))")
         }
     }
 }
