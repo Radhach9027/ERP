@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2282070283AAB9C0025154B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228206F283AAB9C0025154B /* String+Extension.swift */; };
 		A2282072283B58230025154B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282071283B58230025154B /* Bundle.swift */; };
-		A2282076283B65670025154B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282075283B65670025154B /* Data+Extensions.swift */; };
 		A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */; };
 		A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207D283B80640025154B /* SecCertificate+Extensions.swift */; };
 		A2282080283B86F70025154B /* Network+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207F283B86F70025154B /* Network+Extensions.swift */; };
@@ -53,9 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A228206F283AAB9C0025154B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A2282071283B58230025154B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		A2282075283B65670025154B /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Extensions.swift"; sourceTree = "<group>"; };
 		A228207D283B80640025154B /* SecCertificate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+Extensions.swift"; sourceTree = "<group>"; };
 		A228207F283B86F70025154B /* Network+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Extensions.swift"; sourceTree = "<group>"; };
@@ -232,8 +228,6 @@
 				A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */,
 				A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */,
 				A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */,
-				A228206F283AAB9C0025154B /* String+Extension.swift */,
-				A2282075283B65670025154B /* Data+Extensions.swift */,
 				A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */,
 				A228207D283B80640025154B /* SecCertificate+Extensions.swift */,
 				A228207F283B86F70025154B /* Network+Extensions.swift */,
@@ -380,7 +374,6 @@
 			files = (
 				A2282072283B58230025154B /* Bundle.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
-				A2282076283B65670025154B /* Data+Extensions.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
 				A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */,
 				A2282080283B86F70025154B /* Network+Extensions.swift in Sources */,
@@ -388,7 +381,6 @@
 				A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */,
 				A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */,
 				A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */,
-				A2282070283AAB9C0025154B /* String+Extension.swift in Sources */,
 				A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */,
 				A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */,
 				A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */,

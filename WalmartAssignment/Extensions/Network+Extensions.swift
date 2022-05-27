@@ -21,15 +21,13 @@ extension Network {
     }
     
     static var session: Network {
-        
         guard let certificate = certificate else {
             return Network()
         }
         
         let network = Network(configuration: .defaultConfig,
                               delegateQueue: OperationQueue(),
-                              pinning: SSLPinning.certificatePinning(certificate: certificate,
-                                                                     hash: SecCertificate.hashKey))
+                              pinning: SSLPinning.certificatePinning(certificate: certificate, hash: SecCertificate.hashKey))
         return network
         
     }
