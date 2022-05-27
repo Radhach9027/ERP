@@ -42,13 +42,14 @@ final class ImageLoader: UIImageView {
     func loadImageWithUrl(_ url: URL) {
         imageURL = url
         image = nil
-        
         activityIndicator.startAnimating()
-        
+        loadImage(url: url)
+    }
+    
+    private func loadImage(url: URL) {
         network?.request(for: url,
                             receive: .main)
             .sink { [weak self] result in
-                
                 switch result {
                     case .finished:
                         print("Done")
