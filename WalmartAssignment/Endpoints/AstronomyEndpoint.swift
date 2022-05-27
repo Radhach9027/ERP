@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetworkClient
 
 enum AstronomyEndpoint {
     case fetch

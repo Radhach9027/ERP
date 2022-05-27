@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "NetworkClient",
+        "repositoryURL": "https://github.com/Radhach9027/NetworkClient",
+        "state": {
+          "branch": "main",
+          "revision": "bcf7e28e6adf07e19aac3b9cf5db4d86a6587e6a",
+          "version": null
+        }
+      },
+      {
         "package": "Reachability",
         "repositoryURL": "https://github.com/ashleymills/Reachability.swift",
         "state": {

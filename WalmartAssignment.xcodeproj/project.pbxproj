@@ -7,16 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51D735F228364E95003E0439 /* NetworkErrors.json in Resources */ = {isa = PBXBuildFile; fileRef = 51D735F128364E95003E0439 /* NetworkErrors.json */; };
 		A2282070283AAB9C0025154B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228206F283AAB9C0025154B /* String+Extension.swift */; };
 		A2282072283B58230025154B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282071283B58230025154B /* Bundle.swift */; };
-		A2282074283B64B90025154B /* NetworkSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282073283B64B90025154B /* NetworkSessionDelegate.swift */; };
 		A2282076283B65670025154B /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282075283B65670025154B /* Data+Extensions.swift */; };
-		A2282078283B66420025154B /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282077283B66420025154B /* NetworkResult.swift */; };
-		A228207A283B70E70025154B /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282079283B70E70025154B /* NetworkLogger.swift */; };
 		A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */; };
 		A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207D283B80640025154B /* SecCertificate+Extensions.swift */; };
 		A2282080283B86F70025154B /* Network+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207F283B86F70025154B /* Network+Extensions.swift */; };
+		A2282087283FCC030025154B /* NetworkClient in Frameworks */ = {isa = PBXBuildFile; productRef = A2282086283FCC030025154B /* NetworkClient */; };
 		A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AC28165E150060BF21 /* AppDelegate.swift */; };
 		A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */; };
 		A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9B028165E150060BF21 /* RootViewController.swift */; };
@@ -25,16 +22,7 @@
 		A2DBF9CE28165E1A0060BF21 /* WalmartAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9CD28165E1A0060BF21 /* WalmartAssignmentUITests.swift */; };
 		A2DBF9D028165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */; };
 		A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */; };
-		A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */; };
-		A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9E7281660BD0060BF21 /* NetworkError.swift */; };
-		A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */; };
-		A2DBF9ED28166D230060BF21 /* NetworkEnvironmentProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */; };
-		A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */; };
-		A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */; };
-		A2DBF9F328166E030060BF21 /* NetworkHTTPHeaderField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */; };
-		A2DBF9F5281687FD0060BF21 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F4281687FD0060BF21 /* Network.swift */; };
 		A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */; };
-		A2DBF9F9281688B00060BF21 /* NetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */; };
 		A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */; };
 		A2DBF9FD281689A10060BF21 /* AstronomyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FC281689A10060BF21 /* AstronomyService.swift */; };
 		A2DBF9FF28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9FE28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift */; };
@@ -43,8 +31,6 @@
 		A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA052816A6AF0060BF21 /* ImageLoader.swift */; };
 		A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */; };
 		A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */; };
-		A2DBFA1C28194A040060BF21 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = A2DBFA1B28194A040060BF21 /* Reachability */; };
-		A2DBFA1E28194A170060BF21 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA1D28194A170060BF21 /* NetworkReachability.swift */; };
 		A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD0329282E4EBB00775BCA /* RootView.swift */; };
 		A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -67,13 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		51D735F128364E95003E0439 /* NetworkErrors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NetworkErrors.json; sourceTree = "<group>"; };
 		A228206F283AAB9C0025154B /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A2282071283B58230025154B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		A2282073283B64B90025154B /* NetworkSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSessionDelegate.swift; sourceTree = "<group>"; };
 		A2282075283B65670025154B /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
-		A2282077283B66420025154B /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		A2282079283B70E70025154B /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Extensions.swift"; sourceTree = "<group>"; };
 		A228207D283B80640025154B /* SecCertificate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+Extensions.swift"; sourceTree = "<group>"; };
 		A228207F283B86F70025154B /* Network+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Extensions.swift"; sourceTree = "<group>"; };
@@ -89,16 +71,7 @@
 		A2DBF9CD28165E1A0060BF21 /* WalmartAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentUITests.swift; sourceTree = "<group>"; };
 		A2DBF9CF28165E1A0060BF21 /* WalmartAssignmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalmartAssignmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomy.swift; sourceTree = "<group>"; };
-		A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
-		A2DBF9E7281660BD0060BF21 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
-		A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironmentProtocol.swift; sourceTree = "<group>"; };
-		A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestMethod.swift; sourceTree = "<group>"; };
-		A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkBodyRequestParameters.swift; sourceTree = "<group>"; };
-		A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHTTPHeaderField.swift; sourceTree = "<group>"; };
-		A2DBF9F4281687FD0060BF21 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyEndpoint.swift; sourceTree = "<group>"; };
-		A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProtocol.swift; sourceTree = "<group>"; };
 		A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModel.swift; sourceTree = "<group>"; };
 		A2DBF9FC281689A10060BF21 /* AstronomyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyService.swift; sourceTree = "<group>"; };
 		A2DBF9FE28168CBC0060BF21 /* NasaAstronomyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModelTests.swift; sourceTree = "<group>"; };
@@ -107,7 +80,6 @@
 		A2DBFA052816A6AF0060BF21 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		A2DBFA1D28194A170060BF21 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		A2FD0329282E4EBB00775BCA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DBFA1C28194A040060BF21 /* Reachability in Frameworks */,
+				A2282087283FCC030025154B /* NetworkClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +136,6 @@
 				A2DBFA072816ACEB0060BF21 /* Extensions */,
 				A2DBF9E228165FAB0060BF21 /* Components */,
 				A2DBF9E128165FA40060BF21 /* Endpoints */,
-				A2DBF9E028165F940060BF21 /* Network */,
 				A2DBF9DF28165F8B0060BF21 /* Services */,
 				A2DBF9DE28165F830060BF21 /* ViewModels */,
 				A2DBF9DD28165F750060BF21 /* Models */,
@@ -229,27 +200,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A2DBF9E028165F940060BF21 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				51D735F128364E95003E0439 /* NetworkErrors.json */,
-				A2DBF9E5281660990060BF21 /* NetworkProtocol.swift */,
-				A2DBF9E7281660BD0060BF21 /* NetworkError.swift */,
-				A2DBF9EA28166CCC0060BF21 /* URLSessionProtocol.swift */,
-				A2DBF9EC28166D230060BF21 /* NetworkEnvironmentProtocol.swift */,
-				A2DBF9EE28166D740060BF21 /* NetworkRequestMethod.swift */,
-				A2DBF9F028166D910060BF21 /* NetworkBodyRequestParameters.swift */,
-				A2DBF9F228166E030060BF21 /* NetworkHTTPHeaderField.swift */,
-				A2DBF9F4281687FD0060BF21 /* Network.swift */,
-				A2DBF9F8281688B00060BF21 /* NetworkRequestProtocol.swift */,
-				A2DBFA1D28194A170060BF21 /* NetworkReachability.swift */,
-				A2282073283B64B90025154B /* NetworkSessionDelegate.swift */,
-				A2282077283B66420025154B /* NetworkResult.swift */,
-				A2282079283B70E70025154B /* NetworkLogger.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		A2DBF9E128165FA40060BF21 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,7 +258,7 @@
 			);
 			name = WalmartAssignment;
 			packageProductDependencies = (
-				A2DBFA1B28194A040060BF21 /* Reachability */,
+				A2282086283FCC030025154B /* NetworkClient */,
 			);
 			productName = WalmartAssignment;
 			productReference = A2DBF9A928165E150060BF21 /* WalmartAssignment.app */;
@@ -383,7 +333,7 @@
 			);
 			mainGroup = A2DBF9A028165E150060BF21;
 			packageReferences = (
-				A2DBFA1A28194A040060BF21 /* XCRemoteSwiftPackageReference "Reachability" */,
+				A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */,
 			);
 			productRefGroup = A2DBF9AA28165E150060BF21 /* Products */;
 			projectDirPath = "";
@@ -401,7 +351,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51D735F228364E95003E0439 /* NetworkErrors.json in Resources */,
 				A2DBF9B928165E1A0060BF21 /* LaunchScreen.storyboard in Resources */,
 				A2DBF9B628165E1A0060BF21 /* Assets.xcassets in Resources */,
 			);
@@ -429,18 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A228207A283B70E70025154B /* NetworkLogger.swift in Sources */,
-				A2DBF9ED28166D230060BF21 /* NetworkEnvironmentProtocol.swift in Sources */,
 				A2282072283B58230025154B /* Bundle.swift in Sources */,
-				A2DBF9EB28166CCC0060BF21 /* URLSessionProtocol.swift in Sources */,
-				A2282078283B66420025154B /* NetworkResult.swift in Sources */,
-				A2DBF9F5281687FD0060BF21 /* Network.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
-				A2DBF9F9281688B00060BF21 /* NetworkRequestProtocol.swift in Sources */,
-				A2DBF9F328166E030060BF21 /* NetworkHTTPHeaderField.swift in Sources */,
 				A2282076283B65670025154B /* Data+Extensions.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
-				A2DBF9F128166D910060BF21 /* NetworkBodyRequestParameters.swift in Sources */,
 				A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */,
 				A2282080283B86F70025154B /* Network+Extensions.swift in Sources */,
 				A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */,
@@ -449,17 +390,12 @@
 				A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */,
 				A2282070283AAB9C0025154B /* String+Extension.swift in Sources */,
 				A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */,
-				A2DBF9E6281660990060BF21 /* NetworkProtocol.swift in Sources */,
-				A2DBF9E8281660BD0060BF21 /* NetworkError.swift in Sources */,
 				A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */,
 				A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */,
 				A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */,
-				A2DBF9EF28166D740060BF21 /* NetworkRequestMethod.swift in Sources */,
 				A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */,
 				A2DBF9FD281689A10060BF21 /* AstronomyService.swift in Sources */,
 				A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */,
-				A2282074283B64B90025154B /* NetworkSessionDelegate.swift in Sources */,
-				A2DBFA1E28194A170060BF21 /* NetworkReachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +573,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +600,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,21 +728,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A2DBFA1A28194A040060BF21 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+		A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			repositoryURL = "https://github.com/Radhach9027/NetworkClient";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A2DBFA1B28194A040060BF21 /* Reachability */ = {
+		A2282086283FCC030025154B /* NetworkClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A2DBFA1A28194A040060BF21 /* XCRemoteSwiftPackageReference "Reachability" */;
-			productName = Reachability;
+			package = A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */;
+			productName = NetworkClient;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

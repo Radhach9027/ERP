@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import NetworkClient
 
 protocol AstronomyServiceProtocol {
     func fetchAstronomyFromServer(endpoint: AstronomyEndpoint,

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import NetworkClient
 
 protocol NasaAstronomyViewModelProtocol {
     func fetchAstronomy(on receive: DispatchQueue)
