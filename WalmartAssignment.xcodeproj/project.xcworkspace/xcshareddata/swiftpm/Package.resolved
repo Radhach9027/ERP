@@ -2,11 +2,20 @@
   "object": {
     "pins": [
       {
+        "package": "DependencyContainer",
+        "repositoryURL": "https://github.com/Radhach9027/DependencyContainer",
+        "state": {
+          "branch": null,
+          "revision": "b5d8a9b5983ba8c52eb8deb98405b357c4ee0177",
+          "version": "1.0.5"
+        }
+      },
+      {
         "package": "NetworkClient",
         "repositoryURL": "https://github.com/Radhach9027/NetworkClient",
         "state": {
           "branch": "main",
-          "revision": "fb57afba2687e4f9141e3fb6ffaa87a9201c8d7e",
+          "revision": "cdad266a38b99de6e5ae243442d4aa68ff11d89b",
           "version": null
         }
       },

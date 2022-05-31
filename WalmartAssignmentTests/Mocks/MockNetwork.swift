@@ -9,10 +9,11 @@
 import WalmartAssignment
 import Foundation
 import Combine
+import NetworkClient
 
 struct MockNetwork: NetworkProtocol {
     
-    var isInternetReachable: Bool
+    static var isInternetReachable = true
     var isSuccess: Bool
     var errorType: NetworkError? = nil
     
@@ -56,5 +57,13 @@ struct MockNetwork: NetworkProtocol {
             return Fail(error: errorType ?? .unknown)
                 .eraseToAnyPublisher()
         }
+    }
+    
+    func cancelAllTasks() {
+        
+    }
+    
+    func cancelTaskWithUrl(url: URL) {
+        
     }
 }

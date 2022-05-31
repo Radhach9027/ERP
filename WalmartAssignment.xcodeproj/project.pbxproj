@@ -12,6 +12,8 @@
 		A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207D283B80640025154B /* SecCertificate+Extensions.swift */; };
 		A2282080283B86F70025154B /* Network+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207F283B86F70025154B /* Network+Extensions.swift */; };
 		A2282087283FCC030025154B /* NetworkClient in Frameworks */ = {isa = PBXBuildFile; productRef = A2282086283FCC030025154B /* NetworkClient */; };
+		A228208A284654810025154B /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = A2282089284654810025154B /* DependencyContainer */; };
+		A228208D284654F50025154B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228208C284654F50025154B /* DIContainer.swift */; };
 		A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AC28165E150060BF21 /* AppDelegate.swift */; };
 		A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */; };
 		A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9B028165E150060BF21 /* RootViewController.swift */; };
@@ -55,6 +57,7 @@
 		A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Extensions.swift"; sourceTree = "<group>"; };
 		A228207D283B80640025154B /* SecCertificate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+Extensions.swift"; sourceTree = "<group>"; };
 		A228207F283B86F70025154B /* Network+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Extensions.swift"; sourceTree = "<group>"; };
+		A228208C284654F50025154B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		A2DBF9A928165E150060BF21 /* WalmartAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalmartAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9AC28165E150060BF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2282087283FCC030025154B /* NetworkClient in Frameworks */,
+				A228208A284654810025154B /* DependencyContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A228208B284654E30025154B /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				A228208C284654F50025154B /* DIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		A2DBF9A028165E150060BF21 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +141,7 @@
 		A2DBF9AB28165E150060BF21 /* WalmartAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				A228208B284654E30025154B /* DIContainer */,
 				A2DBFA072816ACEB0060BF21 /* Extensions */,
 				A2DBF9E228165FAB0060BF21 /* Components */,
 				A2DBF9E128165FA40060BF21 /* Endpoints */,
@@ -253,6 +266,7 @@
 			name = WalmartAssignment;
 			packageProductDependencies = (
 				A2282086283FCC030025154B /* NetworkClient */,
+				A2282089284654810025154B /* DependencyContainer */,
 			);
 			productName = WalmartAssignment;
 			productReference = A2DBF9A928165E150060BF21 /* WalmartAssignment.app */;
@@ -328,6 +342,7 @@
 			mainGroup = A2DBF9A028165E150060BF21;
 			packageReferences = (
 				A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */,
+				A2282088284654810025154B /* XCRemoteSwiftPackageReference "DependencyContainer" */,
 			);
 			productRefGroup = A2DBF9AA28165E150060BF21 /* Products */;
 			projectDirPath = "";
@@ -377,6 +392,7 @@
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
 				A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */,
 				A2282080283B86F70025154B /* Network+Extensions.swift in Sources */,
+				A228208D284654F50025154B /* DIContainer.swift in Sources */,
 				A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */,
 				A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */,
 				A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */,
@@ -728,6 +744,14 @@
 				kind = branch;
 			};
 		};
+		A2282088284654810025154B /* XCRemoteSwiftPackageReference "DependencyContainer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Radhach9027/DependencyContainer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -735,6 +759,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */;
 			productName = NetworkClient;
+		};
+		A2282089284654810025154B /* DependencyContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A2282088284654810025154B /* XCRemoteSwiftPackageReference "DependencyContainer" */;
+			productName = DependencyContainer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

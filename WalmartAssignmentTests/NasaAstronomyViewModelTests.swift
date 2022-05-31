@@ -8,6 +8,7 @@
 import XCTest
 @testable import WalmartAssignment
 import Combine
+import NetworkClient
 
 final class NasaAstronomyViewModelTests: XCTestCase {
     private var sut: NasaAstronomyViewModelProtocol!
@@ -16,8 +17,7 @@ final class NasaAstronomyViewModelTests: XCTestCase {
     func test_fetchAstronomy_thenMockApiSuccess_shouldReceiveModel() {
         
             // GIVEN
-        let mockNetwork = MockNetwork(isInternetReachable: true,
-                                      isSuccess: true)
+        let mockNetwork = MockNetwork(isSuccess: true)
         let expectedModel = mockNetwork.expectedAstronomyModel
         let service = AstronomyService(network: mockNetwork)
         sut = NasaAstronomyViewModel(service: service)
@@ -45,9 +45,8 @@ final class NasaAstronomyViewModelTests: XCTestCase {
     func test_fetchAstronomy_thenMockApiFailure_shouldReceiveError() {
         
             // GIVEN
-        let mockNetwork = MockNetwork(isInternetReachable: true,
-                                      isSuccess: false,
-                                      errorType: .badRequest)
+        let mockNetwork = MockNetwork(isSuccess: false,
+                                      errorType: .badUrl)
         
         let service = AstronomyService(network: mockNetwork)
         sut = NasaAstronomyViewModel(service: service)
