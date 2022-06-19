@@ -13,7 +13,8 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
     
     var urlComponents: URLComponents? {
         var components = URLComponents(string: baseURL + urlPath)
-        components?.queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
+        components?.queryItems = [URLQueryItem(name: "api_key",
+                                               value: apiKey)]
         return components
     }
     
