@@ -1,0 +1,8 @@
+// Server URL
+API_BASE_URL = https:/$()/api.nasa.gov
+API_KEY = DEMO_KEY
+
+// App Settings
+APP_NAME = ERP
+APP_BUNDLE_ID = com.Chandan.ERP
+APP_VERSION = 1.0.0
