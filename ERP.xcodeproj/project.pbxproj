@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		515EDBBB286AE607000657DD /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EDBBA286AE607000657DD /* Bundle+Extensions.swift */; };
 		A2282072283B58230025154B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282071283B58230025154B /* Bundle.swift */; };
 		A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */; };
 		A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207D283B80640025154B /* SecCertificate+Extensions.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		515EDBBA286AE607000657DD /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		A2282071283B58230025154B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Extensions.swift"; sourceTree = "<group>"; };
 		A228207D283B80640025154B /* SecCertificate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+Extensions.swift"; sourceTree = "<group>"; };
@@ -56,14 +58,14 @@
 		A26240A7285EDCDE00C2F093 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A26240A8285EDCEC00C2F093 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A26240AA285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequestProtocol+Extensions.swift"; sourceTree = "<group>"; };
-		A2DBF9A928165E150060BF21 /* WalmartAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalmartAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DBF9A928165E150060BF21 /* WalmartAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = WalmartAssignment.app; path = ERP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9AC28165E150060BF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A2DBF9B028165E150060BF21 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A2DBF9B528165E1A0060BF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2DBF9B828165E1A0060BF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2DBF9BA28165E1A0060BF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2DBF9BF28165E1A0060BF21 /* WalmartAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalmartAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DBF9BF28165E1A0060BF21 /* WalmartAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WalmartAssignmentTests.xctest; path = ERPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomy.swift; sourceTree = "<group>"; };
 		A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyEndpoint.swift; sourceTree = "<group>"; };
 		A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModel.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				A228207D283B80640025154B /* SecCertificate+Extensions.swift */,
 				A228207F283B86F70025154B /* Network+Extensions.swift */,
 				A26240AA285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift */,
+				515EDBBA286AE607000657DD /* Bundle+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */,
 				A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */,
 				A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */,
+				515EDBBB286AE607000657DD /* Bundle+Extensions.swift in Sources */,
 				A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */,
 				A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */,
 				A26240A9285EDCEC00C2F093 /* Configuration.swift in Sources */,
