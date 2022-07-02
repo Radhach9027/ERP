@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		515EDBBB286AE607000657DD /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EDBBA286AE607000657DD /* Bundle+Extensions.swift */; };
+		515EDBBE286D92A0000657DD /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 515EDBBD286D92A0000657DD /* DesignSystem */; };
+		515EDBC02870128C000657DD /* ModularConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EDBBF2870128C000657DD /* ModularConfiguration.swift */; };
 		A2282072283B58230025154B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282071283B58230025154B /* Bundle.swift */; };
 		A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */; };
 		A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207D283B80640025154B /* SecCertificate+Extensions.swift */; };
@@ -48,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		515EDBBA286AE607000657DD /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		515EDBBF2870128C000657DD /* ModularConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularConfiguration.swift; sourceTree = "<group>"; };
 		A2282071283B58230025154B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Extensions.swift"; sourceTree = "<group>"; };
 		A228207D283B80640025154B /* SecCertificate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+Extensions.swift"; sourceTree = "<group>"; };
@@ -85,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515EDBBE286D92A0000657DD /* DesignSystem in Frameworks */,
 				A2282087283FCC030025154B /* NetworkClient in Frameworks */,
 				A228208A284654810025154B /* DependencyContainer in Frameworks */,
 			);
@@ -151,6 +155,7 @@
 				A2DBF9DC28165F6A0060BF21 /* Views */,
 				A2DBF9AC28165E150060BF21 /* AppDelegate.swift */,
 				A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */,
+				515EDBBF2870128C000657DD /* ModularConfiguration.swift */,
 				A2DBF9B528165E1A0060BF21 /* Assets.xcassets */,
 				A2DBF9B728165E1A0060BF21 /* LaunchScreen.storyboard */,
 				A2DBF9BA28165E1A0060BF21 /* Info.plist */,
@@ -260,6 +265,7 @@
 			packageProductDependencies = (
 				A2282086283FCC030025154B /* NetworkClient */,
 				A2282089284654810025154B /* DependencyContainer */,
+				515EDBBD286D92A0000657DD /* DesignSystem */,
 			);
 			productName = WalmartAssignment;
 			productReference = A2DBF9A928165E150060BF21 /* WalmartAssignment.app */;
@@ -314,6 +320,7 @@
 			packageReferences = (
 				A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */,
 				A2282088284654810025154B /* XCRemoteSwiftPackageReference "DependencyContainer" */,
+				515EDBBC286D92A0000657DD /* XCRemoteSwiftPackageReference "DesignSystem" */,
 			);
 			productRefGroup = A2DBF9AA28165E150060BF21 /* Products */;
 			projectDirPath = "";
@@ -351,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2282072283B58230025154B /* Bundle.swift in Sources */,
+				515EDBC02870128C000657DD /* ModularConfiguration.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
 				A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */,
@@ -1091,6 +1099,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		515EDBBC286D92A0000657DD /* XCRemoteSwiftPackageReference "DesignSystem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Radhach9027/DesignSystem.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Radhach9027/NetworkClient";
@@ -1110,6 +1126,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		515EDBBD286D92A0000657DD /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 515EDBBC286D92A0000657DD /* XCRemoteSwiftPackageReference "DesignSystem" */;
+			productName = DesignSystem;
+		};
 		A2282086283FCC030025154B /* NetworkClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A2282085283FCC030025154B /* XCRemoteSwiftPackageReference "NetworkClient" */;
