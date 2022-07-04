@@ -3,6 +3,12 @@ import Foundation
 import Combine
 import NetworkClient
 
+final class BundleClass {
+    var bundle: Bundle {
+        return Bundle(for: type(of: self))
+    }
+}
+
 struct MockNetwork: NetworkProtocol {
     
     static var isInternetReachable = true

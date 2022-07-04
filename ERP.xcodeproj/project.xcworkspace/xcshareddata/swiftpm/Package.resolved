@@ -35,6 +35,24 @@
         "branch" : "master",
         "revision" : "a81b7367f2c46875f29577e03a60c39cdfad0c8d"
       }
+    },
+    {
+      "identity" : "sharedcomponents",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Radhach9027/SharedComponents",
+      "state" : {
+        "branch" : "main",
+        "revision" : "44925dac58ca013a79bb6cad0036882941398f0b"
+      }
+    },
+    {
+      "identity" : "swiftkeychainwrapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jrendel/SwiftKeychainWrapper",
+      "state" : {
+        "branch" : "master",
+        "revision" : "9a0294db86521e14df7b383ec912422a8dd498f1"
+      }
     }
   ],
   "version" : 2

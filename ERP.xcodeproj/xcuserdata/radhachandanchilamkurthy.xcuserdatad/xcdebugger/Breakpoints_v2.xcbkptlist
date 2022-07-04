@@ -103,113 +103,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9D7D80A6-3077-4927-860B-C24D1BC57233"
+            uuid = "A6BEFEE4-695C-4F74-BEF4-6ABADB2F82BE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
+            filePath = "../Home/Sources/Home/Views/RootViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "TabBarController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "9D7D80A6-3077-4927-860B-C24D1BC57233 - d9644292f0866d20"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DesignSystem.TabBarController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;DesignSystem.TabBarController&gt;"
-                  moduleName = "ERP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radhachandanchilamkurthy/Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "9D7D80A6-3077-4927-860B-C24D1BC57233 - 3934b4c5941770af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DesignSystem.TabBarController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;DesignSystem.TabBarController&gt;"
-                  moduleName = "ERP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radhachandanchilamkurthy/Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "84">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E8ABBD40-F4BF-427F-B669-47881E3F16A6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "init(viewControllers:didSelected:tabBarAppearance:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "init(viewModel:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2BD6C225-E69C-4804-A9A0-5B6B1FA0ACC3"
+            uuid = "AEF533D6-840E-4E3D-B965-D7A839E8AA6A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
+            filePath = "../Home/Sources/Home/Views/RootViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "TabBarController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "2BD6C225-E69C-4804-A9A0-5B6B1FA0ACC3 - fdb2bc86b97994e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DesignSystem.TabBarController.__allocating_init(viewControllers: Swift.Array&lt;DesignSystem.TabBar&gt;, didSelected: Swift.Optional&lt;(__C.UIViewController) -&gt; ()&gt;, tabBarAppearance: Swift.Optional&lt;DesignSystem.TabBarAppearance&gt;) -&gt; DesignSystem.TabBarController"
-                  moduleName = "ERP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radhachandanchilamkurthy/Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "2BD6C225-E69C-4804-A9A0-5B6B1FA0ACC3 - 7cf959ac84de3c66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DesignSystem.TabBarController.init(viewControllers: Swift.Array&lt;DesignSystem.TabBar&gt;, didSelected: Swift.Optional&lt;(__C.UIViewController) -&gt; ()&gt;, tabBarAppearance: Swift.Optional&lt;DesignSystem.TabBarAppearance&gt;) -&gt; DesignSystem.TabBarController"
-                  moduleName = "ERP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/radhachandanchilamkurthy/Library/Developer/Xcode/DerivedData/ERP-cnwsnnljwrzcssgccmcxmedenjzu/SourcePackages/checkouts/DesignSystem/Sources/DesignSystem/TabBar/TabBar.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "124">
-               </Location>
-            </Locations>
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5670F9E9-7384-45CC-8C63-385C36CFC9DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ERP/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F4082B8-2B6D-4AB0-AC7A-43FD225EFAC8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Home/Sources/Home/Views/RootViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

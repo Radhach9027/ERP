@@ -10,9 +10,7 @@ protocol DependencyProtocol {
 struct DIContainer: DependencyProtocol {
     
     private static let dependcies = Dependencies {
-        Dependency { NasaAstronomyViewModel() as NasaAstronomyViewModelProtocol }
         Dependency { Network() as NetworkProtocol }
-        Dependency { AstronomyService() as AstronomyServiceProtocol }
     }
     
     static func addDependencies() {
@@ -20,6 +18,5 @@ struct DIContainer: DependencyProtocol {
     }
     
     static func mockDependencies() {
-        
     }
 }
