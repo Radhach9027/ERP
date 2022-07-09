@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510E50012873DAE000C1E6F7 /* Favourites in Frameworks */ = {isa = PBXBuildFile; productRef = 510E50002873DAE000C1E6F7 /* Favourites */; };
+		510E50032873DAE000C1E6F7 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 510E50022873DAE000C1E6F7 /* Profile */; };
 		515EDBBB286AE607000657DD /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EDBBA286AE607000657DD /* Bundle+Extensions.swift */; };
 		515EDBBE286D92A0000657DD /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = 515EDBBD286D92A0000657DD /* DesignSystem */; };
 		515EDBC02870128C000657DD /* ModularConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515EDBBF2870128C000657DD /* ModularConfiguration.swift */; };
 		515EDBC828720816000657DD /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 515EDBC728720816000657DD /* Home */; };
+		518EEFD62873DD940012BB1D /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 518EEFD52873DD940012BB1D /* Settings */; };
 		A2282087283FCC030025154B /* NetworkClient in Frameworks */ = {isa = PBXBuildFile; productRef = A2282086283FCC030025154B /* NetworkClient */; };
 		A228208A284654810025154B /* DependencyContainer in Frameworks */ = {isa = PBXBuildFile; productRef = A2282089284654810025154B /* DependencyContainer */; };
 		A228208D284654F50025154B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228208C284654F50025154B /* DIContainer.swift */; };
@@ -35,9 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		510E4FFE2873DAD100C1E6F7 /* Favourites */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Favourites; path = ../Favourites; sourceTree = "<group>"; };
+		510E4FFF2873DAD700C1E6F7 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Profile; path = ../Profile; sourceTree = "<group>"; };
 		515EDBBA286AE607000657DD /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
 		515EDBBF2870128C000657DD /* ModularConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularConfiguration.swift; sourceTree = "<group>"; };
 		515EDBC52871C493000657DD /* Home */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Home; path = ../Home; sourceTree = "<group>"; };
+		518EEFD42873DD8E0012BB1D /* Settings */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Settings; path = ../Settings; sourceTree = "<group>"; };
 		A228208C284654F50025154B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		A26240A5285EDCB600C2F093 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		A26240A6285EDCC600C2F093 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -60,7 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518EEFD62873DD940012BB1D /* Settings in Frameworks */,
+				510E50032873DAE000C1E6F7 /* Profile in Frameworks */,
 				515EDBBE286D92A0000657DD /* DesignSystem in Frameworks */,
+				510E50012873DAE000C1E6F7 /* Favourites in Frameworks */,
 				515EDBC828720816000657DD /* Home in Frameworks */,
 				A2282087283FCC030025154B /* NetworkClient in Frameworks */,
 				A228208A284654810025154B /* DependencyContainer in Frameworks */,
@@ -77,12 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		515EDBC22871C3C9000657DD /* Packages */ = {
+		515EDBC22871C3C9000657DD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				518EEFD42873DD8E0012BB1D /* Settings */,
+				510E4FFF2873DAD700C1E6F7 /* Profile */,
+				510E4FFE2873DAD100C1E6F7 /* Favourites */,
 				515EDBC52871C493000657DD /* Home */,
 			);
-			name = Packages;
+			name = Modules;
 			sourceTree = "<group>";
 		};
 		515EDBC628720816000657DD /* Frameworks */ = {
@@ -114,7 +126,7 @@
 		A2DBF9A028165E150060BF21 = {
 			isa = PBXGroup;
 			children = (
-				515EDBC22871C3C9000657DD /* Packages */,
+				515EDBC22871C3C9000657DD /* Modules */,
 				A2DBF9AB28165E150060BF21 /* ERP */,
 				A2DBF9C228165E1A0060BF21 /* ERPUnitTests */,
 				A2DBF9AA28165E150060BF21 /* Products */,
@@ -194,6 +206,9 @@
 				A2282089284654810025154B /* DependencyContainer */,
 				515EDBBD286D92A0000657DD /* DesignSystem */,
 				515EDBC728720816000657DD /* Home */,
+				510E50002873DAE000C1E6F7 /* Favourites */,
+				510E50022873DAE000C1E6F7 /* Profile */,
+				518EEFD52873DD940012BB1D /* Settings */,
 			);
 			productName = WalmartAssignment;
 			productReference = A2DBF9A928165E150060BF21 /* WalmartAssignment.app */;
@@ -1039,6 +1054,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		510E50002873DAE000C1E6F7 /* Favourites */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Favourites;
+		};
+		510E50022873DAE000C1E6F7 /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
+		};
 		515EDBBD286D92A0000657DD /* DesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 515EDBBC286D92A0000657DD /* XCRemoteSwiftPackageReference "DesignSystem" */;
@@ -1047,6 +1070,10 @@
 		515EDBC728720816000657DD /* Home */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Home;
+		};
+		518EEFD52873DD940012BB1D /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
 		};
 		A2282086283FCC030025154B /* NetworkClient */ = {
 			isa = XCSwiftPackageProductDependency;
