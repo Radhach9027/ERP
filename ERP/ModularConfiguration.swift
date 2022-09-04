@@ -14,40 +14,48 @@ final class ModularConfiguration {
         var root = RootViewController()
         root.title = Copy.home
         let rootNavigation = navigationController(root)
-        return TabBar.makeTab(controller: rootNavigation,
-                              title: Copy.home,
-                              image: UIImage(systemName: ImagesCopy.home)!,
-                              selectedImage:  UIImage(systemName: ImagesCopy.homeSelected)!)
+        return TabBar.makeTab(
+            controller: rootNavigation,
+            title: Copy.home,
+            image: UIImage(systemName: ImagesCopy.home)!,
+            selectedImage:  UIImage(systemName: ImagesCopy.homeSelected)!
+        )
     }()
     
     private lazy var favoritesTab: TabBar = {
         var fav = FavouritesViewController()
         fav.title = Copy.fav
         let rootNavigation = navigationController(fav)
-        return TabBar.makeTab(controller: rootNavigation,
-                              title: Copy.fav,
-                              image: UIImage(systemName: ImagesCopy.favorites)!,
-                              selectedImage:  UIImage(systemName: ImagesCopy.favoritesSelected)!)
+        return TabBar.makeTab(
+            controller: rootNavigation,
+            title: Copy.fav,
+            image: UIImage(systemName: ImagesCopy.favorites)!,
+            selectedImage:  UIImage(systemName: ImagesCopy.favoritesSelected)!
+        )
     }()
     
     private lazy var profileTab: TabBar = {
         var profile = ProfileViewController()
         profile.title = Copy.profile
         let rootNavigation = navigationController(profile)
-        return TabBar.makeTab(controller: rootNavigation,
-                       title: Copy.profile,
-                       image: UIImage(systemName: ImagesCopy.profile)!,
-                       selectedImage:  UIImage(systemName: ImagesCopy.profileSelected)!)
+        return TabBar.makeTab(
+            controller: rootNavigation,
+            title: Copy.profile,
+            image: UIImage(systemName: ImagesCopy.profile)!,
+            selectedImage:  UIImage(systemName: ImagesCopy.profileSelected)!
+        )
     }()
     
     private lazy var settingsTab: TabBar = {
         var settings = SettingsViewController()
         settings.title = Copy.settings
         let rootNavigation = navigationController(settings)
-        return TabBar.makeTab(controller: rootNavigation,
-                       title: Copy.settings,
-                       image: UIImage(systemName: ImagesCopy.settings)!,
-                       selectedImage:  UIImage(systemName: ImagesCopy.settingsSelected)!)
+        return TabBar.makeTab(
+            controller: rootNavigation,
+            title: Copy.settings,
+            image: UIImage(systemName: ImagesCopy.settings)!,
+            selectedImage:  UIImage(systemName: ImagesCopy.settingsSelected)!
+        )
     }()
     
     private lazy var navigationController:(UIViewController)-> UINavigationController = { controller in
@@ -56,23 +64,29 @@ final class ModularConfiguration {
 
     
     private lazy var tabBarAppearance: TabBarAppearance = {
-        TabBarAppearance(tabColor: .blue,
-                         tabTintColor: .white,
-                         tabUnselectedColor: .gray,
-                         tabItemTitleSelectedColor: .gray,
-                         tabItemTitleUnSelectedColor: .gray,
-                         tabItemTitleSelectedFont: UIFont.boldSystemFont(ofSize: 14),
-                         tabItemTitleUnSelectedFont: UIFont.systemFont(ofSize: 14))
+        TabBarAppearance(
+            tabColor: .blue,
+            tabTintColor: .white,
+            tabUnselectedColor: .gray,
+            tabItemTitleSelectedColor: .gray,
+            tabItemTitleUnSelectedColor: .gray,
+            tabItemTitleSelectedFont: UIFont.boldSystemFont(ofSize: 14),
+            tabItemTitleUnSelectedFont: UIFont.systemFont(ofSize: 14)
+        )
     }()
     
     var fetchRoot: UIViewController {
-        let viewControllers = [homeTab,
-                               favoritesTab,
-                               profileTab,
-                               settingsTab]
-        return TabBarController(viewControllers: viewControllers,
-                                didSelected: { _ in },
-                                tabBarAppearance: tabBarAppearance)
+        let viewControllers = [
+            homeTab,
+            favoritesTab,
+            profileTab,
+            settingsTab
+        ]
+        return TabBarController(
+            viewControllers: viewControllers,
+            didSelected: { _ in },
+            tabBarAppearance: tabBarAppearance
+        )
     }
 }
 

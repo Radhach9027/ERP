@@ -10,23 +10,38 @@ extension Bundle {
         static let appBundleId = "APP_BUNDLE_ID"
     }
     
-    static var appName: String? {
-        return main.object(forInfoDictionaryKey: Copy.appName) as? String
+    static var appName: String {
+        guard let appName = main.object(forInfoDictionaryKey: Copy.appName) as? String else {
+            fatalError("App name missing in plist")
+        }
+        return appName
     }
     
-    static var apiKey: String? {
-        return main.object(forInfoDictionaryKey: Copy.apiKey) as? String
+    static var apiKey: String {
+        guard let apiKey = main.object(forInfoDictionaryKey: Copy.apiKey) as? String else {
+            fatalError("Api key missing in plist")
+        }
+        return apiKey
     }
     
-    static var baseUrl: String? {
-        return main.object(forInfoDictionaryKey: Copy.baseUrl) as? String
+    static var baseUrl: String {
+        guard let baseUrl = main.object(forInfoDictionaryKey: Copy.baseUrl) as? String else {
+            fatalError("Base url missing in plist")
+        }
+        return baseUrl
     }
     
-    static var appVersion: String? {
-        return main.object(forInfoDictionaryKey: Copy.appVersion) as? String
+    static var appVersion: String {
+        guard let appVersion = main.object(forInfoDictionaryKey: Copy.appVersion) as? String else {
+            fatalError("App version missing in plist")
+        }
+        return appVersion
     }
     
-    static var bundleId: String? {
-        return main.object(forInfoDictionaryKey: Copy.appBundleId) as? String
+    static var bundleId: String {
+        guard let bundleId = main.object(forInfoDictionaryKey: Copy.appBundleId) as? String else {
+            fatalError("Bundle id missing in plist")
+        }
+        return bundleId
     }
 }
