@@ -27,7 +27,7 @@ extension AstronomyEndpoint: NetworkRequestProtocol {
     
     func manageInternetConnectivityBasedOnCache(request: URLRequest) -> NetworkError? {
         
-        guard !isNetworkReachable else {
+        guard !Network.isInternetReachable else {
             return nil
         }
         

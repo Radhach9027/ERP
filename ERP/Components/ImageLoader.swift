@@ -16,7 +16,7 @@ final class ImageLoader: UIImageView {
         return indicator
     }()
     
-    init(network: NetworkProtocol = Network(session: URLSession.cacheSession)) {
+    init(network: NetworkProtocol = Network(config: .cache())) {
         self.network = network
         super.init(frame: .zero)
         setup()
@@ -36,11 +36,11 @@ final class ImageLoader: UIImageView {
         imageURL = url
         image = nil
         activityIndicator.startAnimating()
-        loadImage(url: url)
+        loadImage(endpoint: .fetch(url: url))
     }
     
-    private func loadImage(url: URL) {
-        network?.request(for: url,
+    private func loadImage(endpoint: ImageLoaderEndpoint) {
+        network?.request(for: endpoint,
                             receive: .main)
             .sink { [weak self] result in
                 switch result {
@@ -54,9 +54,7 @@ final class ImageLoader: UIImageView {
             } receiveValue: { [weak self] data in
                 
                 if let imageToCache = UIImage(data: data) {
-                    if self?.imageURL == url {
-                        self?.image = imageToCache
-                    }
+                    self?.image = imageToCache
                 }
             }.store(in: &cancellable)
     }

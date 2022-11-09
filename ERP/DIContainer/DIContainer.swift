@@ -11,7 +11,7 @@ struct DIContainer: DependencyProtocol {
     
     private static let dependcies = Dependencies {
         Dependency { NasaAstronomyViewModel() as NasaAstronomyViewModelProtocol }
-        Dependency { Network() as NetworkProtocol }
+        Dependency { Network(config: .default()) as NetworkProtocol }
         Dependency { AstronomyService() as AstronomyServiceProtocol }
     }
     

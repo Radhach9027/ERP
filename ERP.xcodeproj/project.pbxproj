@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A2282072283B58230025154B /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2282071283B58230025154B /* Bundle.swift */; };
-		A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */; };
 		A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207D283B80640025154B /* SecCertificate+Extensions.swift */; };
 		A2282080283B86F70025154B /* Network+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228207F283B86F70025154B /* Network+Extensions.swift */; };
 		A2282087283FCC030025154B /* NetworkClient in Frameworks */ = {isa = PBXBuildFile; productRef = A2282086283FCC030025154B /* NetworkClient */; };
@@ -16,6 +15,8 @@
 		A228208D284654F50025154B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228208C284654F50025154B /* DIContainer.swift */; };
 		A26240A9285EDCEC00C2F093 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26240A8285EDCEC00C2F093 /* Configuration.swift */; };
 		A26240AB285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26240AA285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift */; };
+		A2C495CC291BA013004A4C8B /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C495CB291BA013004A4C8B /* Bundle+Extensions.swift */; };
+		A2C495CE291BA328004A4C8B /* ImageLoaderEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C495CD291BA328004A4C8B /* ImageLoaderEndpoint.swift */; };
 		A2DBF9AD28165E150060BF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AC28165E150060BF21 /* AppDelegate.swift */; };
 		A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */; };
 		A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBF9B028165E150060BF21 /* RootViewController.swift */; };
@@ -29,7 +30,6 @@
 		A2DBFA0228168EFA0060BF21 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA0128168EFA0060BF21 /* MockNetwork.swift */; };
 		A2DBFA042816A12B0060BF21 /* AstronomyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = A2DBFA032816A12B0060BF21 /* AstronomyResponse.json */; };
 		A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA052816A6AF0060BF21 /* ImageLoader.swift */; };
-		A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */; };
 		A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */; };
 		A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD0329282E4EBB00775BCA /* RootView.swift */; };
 		A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */; };
@@ -47,7 +47,6 @@
 
 /* Begin PBXFileReference section */
 		A2282071283B58230025154B /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
-		A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Extensions.swift"; sourceTree = "<group>"; };
 		A228207D283B80640025154B /* SecCertificate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecCertificate+Extensions.swift"; sourceTree = "<group>"; };
 		A228207F283B86F70025154B /* Network+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Extensions.swift"; sourceTree = "<group>"; };
 		A228208C284654F50025154B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -56,14 +55,16 @@
 		A26240A7285EDCDE00C2F093 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A26240A8285EDCEC00C2F093 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A26240AA285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkRequestProtocol+Extensions.swift"; sourceTree = "<group>"; };
-		A2DBF9A928165E150060BF21 /* WalmartAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalmartAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C495CB291BA013004A4C8B /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		A2C495CD291BA328004A4C8B /* ImageLoaderEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderEndpoint.swift; sourceTree = "<group>"; };
+		A2DBF9A928165E150060BF21 /* WalmartAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = WalmartAssignment.app; path = ERP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9AC28165E150060BF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2DBF9AE28165E150060BF21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A2DBF9B028165E150060BF21 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		A2DBF9B528165E1A0060BF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2DBF9B828165E1A0060BF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2DBF9BA28165E1A0060BF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2DBF9BF28165E1A0060BF21 /* WalmartAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalmartAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2DBF9BF28165E1A0060BF21 /* WalmartAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WalmartAssignmentTests.xctest; path = ERPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2DBF9E3281660020060BF21 /* NasaAstronomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomy.swift; sourceTree = "<group>"; };
 		A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronomyEndpoint.swift; sourceTree = "<group>"; };
 		A2DBF9FA281689120060BF21 /* NasaAstronomyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAstronomyViewModel.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		A2DBFA0128168EFA0060BF21 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		A2DBFA032816A12B0060BF21 /* AstronomyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AstronomyResponse.json; sourceTree = "<group>"; };
 		A2DBFA052816A6AF0060BF21 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		A2FD0329282E4EBB00775BCA /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -202,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A2DBF9F6281688830060BF21 /* AstronomyEndpoint.swift */,
+				A2C495CD291BA328004A4C8B /* ImageLoaderEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -227,13 +228,12 @@
 		A2DBFA072816ACEB0060BF21 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A2DBFA082816ACF90060BF21 /* URLSession+Extensions.swift */,
 				A2DBFA182816ED470060BF21 /* UIViewController+Extensions.swift */,
 				A2FD032B282E4FF100775BCA /* UIView+Extensions.swift */,
-				A228207B283B788B0025154B /* URLSessionConfiguration+Extensions.swift */,
 				A228207D283B80640025154B /* SecCertificate+Extensions.swift */,
 				A228207F283B86F70025154B /* Network+Extensions.swift */,
 				A26240AA285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift */,
+				A2C495CB291BA013004A4C8B /* Bundle+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,14 +350,13 @@
 				A2282072283B58230025154B /* Bundle.swift in Sources */,
 				A2DBF9B128165E150060BF21 /* RootViewController.swift in Sources */,
 				A2DBF9E4281660020060BF21 /* NasaAstronomy.swift in Sources */,
-				A2DBFA092816ACF90060BF21 /* URLSession+Extensions.swift in Sources */,
 				A2282080283B86F70025154B /* Network+Extensions.swift in Sources */,
 				A228208D284654F50025154B /* DIContainer.swift in Sources */,
 				A2DBFA192816ED470060BF21 /* UIViewController+Extensions.swift in Sources */,
 				A26240AB285EDFBC00C2F093 /* NetworkRequestProtocol+Extensions.swift in Sources */,
 				A2FD032C282E4FF100775BCA /* UIView+Extensions.swift in Sources */,
-				A228207C283B788B0025154B /* URLSessionConfiguration+Extensions.swift in Sources */,
 				A2DBF9FB281689120060BF21 /* NasaAstronomyViewModel.swift in Sources */,
+				A2C495CC291BA013004A4C8B /* Bundle+Extensions.swift in Sources */,
 				A2FD032A282E4EBB00775BCA /* RootView.swift in Sources */,
 				A2DBFA062816A6AF0060BF21 /* ImageLoader.swift in Sources */,
 				A26240A9285EDCEC00C2F093 /* Configuration.swift in Sources */,
@@ -365,6 +364,7 @@
 				A228207E283B80650025154B /* SecCertificate+Extensions.swift in Sources */,
 				A2DBF9F7281688830060BF21 /* AstronomyEndpoint.swift in Sources */,
 				A2DBF9FD281689A10060BF21 /* AstronomyService.swift in Sources */,
+				A2C495CE291BA328004A4C8B /* ImageLoaderEndpoint.swift in Sources */,
 				A2DBF9AF28165E150060BF21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,26 +2,31 @@ import Foundation
 import NetworkClient
 
 extension Network {
-    
-    static var certificate: SecCertificate? {
+    class var defaultSession: Network {
         switch SecCertificate.loadFromBundle() {
-            case .success(let cert):
-                return cert
-            case .failure(let error):
-                print(error)
-                return nil
+            case let .success(certificate):
+                return Network(
+                    config: .default(),
+                    pinning: .certificatePinning(certificate: certificate)
+                )
+            case .failure:
+                return Network(config: .default())
         }
     }
     
-    static var session: Network {
-        guard let certificate = certificate else {
-            return Network()
+    class func backgroundSession(urlSessionDidFinishEvents: @escaping (URLSession) -> Void) -> Network {
+        switch SecCertificate.loadFromBundle() {
+            case let .success(certificate):
+                return Network(
+                    config: .background(identifer: Bundle.identifier),
+                    pinning: .certificatePinning(certificate: certificate),
+                    urlSessionDidFinishEvents: urlSessionDidFinishEvents
+                )
+            case .failure:
+                return Network(
+                    config: .background(identifer: Bundle.identifier),
+                    urlSessionDidFinishEvents: urlSessionDidFinishEvents
+                )
         }
-        
-        let network = Network(configuration: .defaultConfig,
-                              delegateQueue: OperationQueue(),
-                              pinning: SSLPinning.certificatePinning(certificate: certificate, hash: SecCertificate.hashKey))
-        return network
-        
     }
 }

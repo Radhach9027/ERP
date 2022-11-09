@@ -1,24 +1,31 @@
 import Foundation
 
-enum SecCertificateError<S, F> {
+enum SecCertificateResult<S, F> {
     case success(S)
     case failure(F)
 }
 
 extension SecCertificate {
-    
     enum Certificate {
-        static let cert = ""
+        static let name = "stackoverflow"
     }
     
-    static var hashKey: String {
-        ""
+    static var hashKeys: [String] {
+        ["put your public keys"]
     }
     
-    static func loadFromBundle(certName: String = Certificate.cert,
-                               bundle: Bundle = Bundle.main) -> SecCertificateError<SecCertificate, String> {
-        
-        guard let filePath = bundle.path(forResource: certName, ofType: "cer") else {
+    static var domain: String {
+        "your host"
+    }
+    
+    static func loadFromBundle(
+        certName: String = Certificate.name,
+        bundle: Bundle = Bundle.main
+    ) -> SecCertificateResult<SecCertificate, String> {
+        guard let filePath = bundle.path(
+            forResource: certName,
+            ofType: "cer"
+        ) else {
             return .failure("Couldn't load resource from \(bundle)")
         }
         
@@ -34,3 +41,4 @@ extension SecCertificate {
         }
     }
 }
+

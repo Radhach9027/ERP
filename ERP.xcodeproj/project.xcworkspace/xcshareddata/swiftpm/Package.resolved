@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "DependencyContainer",
-        "repositoryURL": "https://github.com/Radhach9027/DependencyContainer",
-        "state": {
-          "branch": null,
-          "revision": "b5d8a9b5983ba8c52eb8deb98405b357c4ee0177",
-          "version": "1.0.5"
-        }
-      },
-      {
-        "package": "NetworkClient",
-        "repositoryURL": "https://github.com/Radhach9027/NetworkClient",
-        "state": {
-          "branch": "main",
-          "revision": "cdad266a38b99de6e5ae243442d4aa68ff11d89b",
-          "version": null
-        }
-      },
-      {
-        "package": "Reachability",
-        "repositoryURL": "https://github.com/ashleymills/Reachability.swift",
-        "state": {
-          "branch": "master",
-          "revision": "a81b7367f2c46875f29577e03a60c39cdfad0c8d",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "dependencycontainer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Radhach9027/DependencyContainer",
+      "state" : {
+        "revision" : "b5d8a9b5983ba8c52eb8deb98405b357c4ee0177",
+        "version" : "1.0.5"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "networkclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Radhach9027/NetworkClient",
+      "state" : {
+        "branch" : "main",
+        "revision" : "643ba86c502a7be82603c8bca33c0d80127a14c7"
+      }
+    },
+    {
+      "identity" : "reachability.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ashleymills/Reachability.swift",
+      "state" : {
+        "branch" : "master",
+        "revision" : "a81b7367f2c46875f29577e03a60c39cdfad0c8d"
+      }
+    }
+  ],
+  "version" : 2
 }

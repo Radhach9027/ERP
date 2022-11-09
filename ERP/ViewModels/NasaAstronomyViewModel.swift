@@ -28,6 +28,7 @@ final class NasaAstronomyViewModel: NasaAstronomyViewModelProtocol {
                 }
             } receiveValue: { [weak self] model in
                 self?.subject.send(model)
-            }.store(in: &cancellable)
+            }
+            .store(in: &cancellable)
     }
 }
